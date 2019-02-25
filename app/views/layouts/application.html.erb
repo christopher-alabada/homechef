@@ -11,7 +11,9 @@
   </head>
   <body>
     <% if user_signed_in? %>
-      <%= current_user %>
+      <div><%= current_user.first_name %> <%= current_user.last_name %></div>
+    <% else %>
+      <div>You're not logged in.</div>
     <% end %>
 
     <%= yield %>
