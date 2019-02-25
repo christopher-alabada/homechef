@@ -4,9 +4,12 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  ROLES = ['foodie', 'chef']
+
   mount_uploader :photo, PhotoUploader
 
   validates :address, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :role, inclusion: { in: ROLES }
 end
