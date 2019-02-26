@@ -1,8 +1,10 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthabe
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_many :foodie_bookings, class_name: 'Booking', foreign_key: 'foodie_id'
+  has_many :chef_bookings, class_name: 'Booking', foreign_key: 'chef_id'
 
   mount_uploader :photo, PhotoUploader
 
