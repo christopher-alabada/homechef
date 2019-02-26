@@ -1,0 +1,13 @@
+<%= link_to "home", root_path %>
+
+<h1>Chefs</h1>
+
+<ul>
+<% @chefs.each do |chef| %>
+  <li>
+    <%= link_to chef_path(chef) do %>
+      <%= chef.first_name %> <%= chef.last_name %>
+    <% end %>
+  </li>
+<% end %>
+</ul>
