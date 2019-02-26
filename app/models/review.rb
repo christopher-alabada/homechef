@@ -6,7 +6,16 @@ class Review < ApplicationRecord
   validates :stars, inclusion: { in: [1, 2, 3, 4, 5] }, presence: true
   # validates f_r.foodie.id and f_r.chef.id is unique conbination
 
-  validates_uniqueness_of :foodie_id, :scope => :chef_id
+  # validates :foodie_id, uniqueness: { scope: :year }
+
+  validate :different_foodie_and_chef
+
+  def different_foodie_and_chef
+    if foodie_id == chef_id
+      errors.add(:foodie_id, "Same person cannot cook and eat!")
+    end
+  end
+
 end
 
 
