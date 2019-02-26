@@ -12,6 +12,8 @@
   <body>
     <% if user_signed_in? %>
       <div><%= current_user.first_name %> <%= current_user.last_name %></div>
+      <div><%= current_user.email %></div>
+      <div><%= cl_image_tag current_user.photo, height: 300, width: 400, crop: :fill %></div>
     <% else %>
       <div>You're not logged in.</div>
     <% end %>
