@@ -1,8 +1,38 @@
-<h1>Homechef Home</h1>
+<div class="navbar-logo"
+  <!-- Logo -->
 
-<ul>
-  <li>Search by location and/or date</li>
-  <li><%= link_to "login", new_user_session_path %></li>
-  <li><%= link_to "sign up", new_user_registration_path %></li>
-  <li><%= link_to "log out", destroy_user_session_path, method: 'delete' %></li>
-</ul>
+  <div class="logo-h1">
+    <%= link_to root_path do %>
+      <%= image_tag "https://res.cloudinary.com/harrisongarovi/image/upload/v1551157460/chef-hat-md.png", alt: "logo", height: 55, width: 45  %>
+    <% end %>
+    <h1>Home Chef</h1>
+  </div>
+
+  <!-- Right Navigation -->
+  <div class="navbar-right hidden-xs hidden-sm">
+    <a href="" class="navbar-item navbar-link">Become a Chef</a>
+    <a href="" class="navbar-item navbar-link">Help</a>
+    <a href="" class="navbar-item navbar-link">Sign Up</a>
+    <a href="" class="navbar-item navbar-link">Log In</a>
+  </div>
+</div>
+
+<div class="banner" style="background-image: url(https://res.cloudinary.com/harrisongarovi/image/upload/v1551167399/chef-coffee-cook-887827.jpg);">
+  <div class="container">
+    <!-- <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a> -->
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
