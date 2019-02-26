@@ -4,7 +4,6 @@ body {
   background-color: #FFFFFF
 }
 
-
 /* navbar */
 .navbar-logo {
   // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
@@ -15,6 +14,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  width: 100%;
 }
 .logo {
   height: 50px;
@@ -42,8 +43,12 @@ body {
 }
 /* Navbar link */
 .navbar-link {
-  color: #616668;
+  color: #FFFFFF;
   font-size: 14px;
+  text-shadow: 0.5px 0.5px 0.5px #000000;
+  /* color: #616668; */
+  /* font-size: 14px; */
+
 }
 .navbar-link:hover {
   color: #da552f;
@@ -60,4 +65,13 @@ body {
   padding: 20px;
   font-family: "Open Sans";
   font-size: 40px;
+  color: #FFFFFF;
+  text-shadow: 0.5px 0.5px 0.5px #000000;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+  height: 100vh;
 }
