@@ -1,8 +1,8 @@
 .head-comment {
   color: #7d7d7d;
-  padding-left: 135px;
+  padding-left: 150px;
   padding-bottom: 20px;
-  padding-top: 30px;
+  padding-top: 80px;
 }
 .card {
   height: 375px;
@@ -10,6 +10,8 @@
   background-position: center;
   color: #7d7d7d;
   position: relative;
+  box-shadow: 1px 1px 1px 1px gray;
+  margin-bottom: 20px;
 }
 
 .card-description {

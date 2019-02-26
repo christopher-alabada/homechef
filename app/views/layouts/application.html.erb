@@ -10,37 +10,32 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
+
     <div class="navbar-logo">
-  <!-- Logo -->
+      <!-- Logo -->
 
-  <%= link_to root_path do %>
-  <%= image_tag "chef-hat-clipart-png-6.png", alt: "logo", width: "50px" %>
-  <% end %>
+      <div class="logo-h1">
+        <%= link_to root_path do %>
+          <%= image_tag "https://res.cloudinary.com/harrisongarovi/image/upload/v1551157460/chef-hat-md.png", alt: "logo", height: 55, width: 45  %>
+        <% end %>
+        <h1>Home Chef</h1>
+      </div>
 
+      <div class="navbar-left">
+        <%#= form_tag(chefs_path), method: :get) do %>
+          <%#= text_field_tag(:search, params[:search]) %>
+          <%#= submit_tag ("search") %>
+        <%# end %>
+      </div>
 
-  <div class="navbar-left">
-    <%#= form_tag(chefs_path), method: :get) do %>
-      <%#= text_field_tag(:search, params[:search]) %>
-      <%#= submit_tag ("search") %>
-    <%# end %>
-  </div>
-
-  <!-- Right Navigation -->
-  <div class="navbar-right hidden-xs hidden-sm">
-
-    <a href="" class="navbar-item navbar-link">Become a Chef</a>
-    <a href="" class="navbar-item navbar-link">Help</a>
-    <a href="" class="navbar-item navbar-link">Sign Up</a>
-    <a href="" class="navbar-item navbar-link">Log in</a>
-  </div>
-</div>
-    <%# if user_signed_in? %>
-      <!-- <div><%#= current_user.first_name %> <%#= current_user.last_name %></div> -->
-      <!-- <div><%#= current_user.email %></div> -->
-      <!-- <div><%#= cl_image_tag current_user.photo, height: 300, width: 400, crop: :fill %></div> -->
-    <%# else %>
-      <!-- <div>You're not logged in.</div> -->
-    <%# end %>
+      <!-- Right Navigation -->
+      <div class="navbar-right hidden-xs hidden-sm">
+        <a href="" class="navbar-item navbar-link">Become a Chef</a>
+        <a href="" class="navbar-item navbar-link">Help</a>
+        <a href="" class="navbar-item navbar-link">Sign Up</a>
+        <a href="" class="navbar-item navbar-link">Log in</a>
+      </div>
+    </div>
 
     <%= yield %>
     <%= javascript_include_tag 'application' %>
