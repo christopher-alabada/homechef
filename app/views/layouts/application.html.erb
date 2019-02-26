@@ -10,11 +10,24 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <% if user_signed_in? %>
-      <div><%= current_user.first_name %> <%= current_user.last_name %></div>
-    <% else %>
-      <div>You're not logged in.</div>
-    <% end %>
+    <div class="navbar-logo">
+      <!-- Logo -->
+
+      <div class="logo-h1">
+        <%= link_to root_path do %>
+          <%= image_tag "https://res.cloudinary.com/harrisongarovi/image/upload/v1551157460/chef-hat-md.png", alt: "logo", height: 55, width: 45  %>
+        <% end %>
+        <h1>Home Chef</h1>
+      </div>
+
+      <!-- Right Navigation -->
+      <div class="navbar-right hidden-xs hidden-sm">
+        <a href="" class="navbar-item navbar-link">Become a Chef</a>
+        <a href="" class="navbar-item navbar-link">Help</a>
+        <a href="" class="navbar-item navbar-link">Sign Up</a>
+        <a href="" class="navbar-item navbar-link">Log in</a>
+      </div>
+    </div>
 
     <%= yield %>
     <%= javascript_include_tag 'application' %>
