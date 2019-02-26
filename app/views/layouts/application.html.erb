@@ -10,13 +10,37 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <% if user_signed_in? %>
-      <div><%= current_user.first_name %> <%= current_user.last_name %></div>
-      <div><%= current_user.email %></div>
-      <div><%= cl_image_tag current_user.photo, height: 300, width: 400, crop: :fill %></div>
-    <% else %>
-      <div>You're not logged in.</div>
-    <% end %>
+    <div class="navbar-logo">
+  <!-- Logo -->
+
+  <%= link_to root_path do %>
+  <%= image_tag "chef-hat-clipart-png-6.png", alt: "logo", width: "50px" %>
+  <% end %>
+
+
+  <div class="navbar-left">
+    <%#= form_tag(chefs_path), method: :get) do %>
+      <%#= text_field_tag(:search, params[:search]) %>
+      <%#= submit_tag ("search") %>
+    <%# end %>
+  </div>
+
+  <!-- Right Navigation -->
+  <div class="navbar-right hidden-xs hidden-sm">
+
+    <a href="" class="navbar-item navbar-link">Become a Chef</a>
+    <a href="" class="navbar-item navbar-link">Help</a>
+    <a href="" class="navbar-item navbar-link">Sign Up</a>
+    <a href="" class="navbar-item navbar-link">Log in</a>
+  </div>
+</div>
+    <%# if user_signed_in? %>
+      <!-- <div><%#= current_user.first_name %> <%#= current_user.last_name %></div> -->
+      <!-- <div><%#= current_user.email %></div> -->
+      <!-- <div><%#= cl_image_tag current_user.photo, height: 300, width: 400, crop: :fill %></div> -->
+    <%# else %>
+      <!-- <div>You're not logged in.</div> -->
+    <%# end %>
 
     <%= yield %>
     <%= javascript_include_tag 'application' %>
