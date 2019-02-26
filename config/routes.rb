@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   namespace :chef do
     resources :bookings, only: [:index, :update]
   end
+
 end
