@@ -1,7 +1,7 @@
 <h1>Homechef Home</h1>
 
 <ul>
-  <li>Search by location and/or date</li>
+  <li>Search by location and/or date - <%= link_to "go to /chefs", chefs_path %></li>
   <li><%= link_to "login", new_user_session_path %></li>
   <li><%= link_to "sign up", new_user_registration_path %></li>
   <li><%= link_to "log out", destroy_user_session_path, method: 'delete' %></li>
