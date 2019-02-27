@@ -7,24 +7,26 @@
 
 
 <div class="container">
-  <div class="profile-container">
-    <h1>About me</h1>
-    <p>I am the chef and owner of Masa, a three-Michelin-starred Japanese and sushi restaurant in San Francisco.</p>
-    <h4>Locations Serving: Shinjuku, Shibuya, Meguro</h4>
-    <h4>Cuisines: Japanese, Chinese, Italian, French</h4>
-  </div>
-
-  <div class="card-wrapper">
-    <div class="banner-content">
-      <h3 class="chef-name"><%= @chef_full_name %> </h3>
-      <div class="card-description">
-      <p class="stars">★★★★★</p>
-      <p>Read reviews</p>
-      <p>¥1000~</p>
-      <%= link_to "Book", new_chef_bookings_path, class: 'btn btn-primary' %>
-      </div>
-      <%= cl_image_tag(@chef.photo, class: 'card-user') %>
+  <div class="show-container">
+    <div class="profile-container">
+      <h1>About me</h1>
+      <p>I am the chef and owner of Masa, a three-Michelin-starred Japanese and sushi restaurant in San Francisco.</p>
+      <h4>Locations Serving: Shinjuku, Shibuya, Meguro</h4>
+      <h4>Cuisines: Japanese, Chinese, Italian, French</h4>
     </div>
-  </div>
 
+    <div class="card-wrapper">
+      <div class="banner-content">
+        <h3 class="chef-name"><%= @chef_full_name %> </h3>
+        <div class="card-description">
+        <p class="stars">★★★★★</p>
+        <p>Read reviews</p>
+        <p>¥1000~</p>
+        <%= link_to "Book", new_chef_bookings_path, class: 'btn btn-primary' %>
+        </div>
+        <%= cl_image_tag(@chef.photo, class: 'card-user') %>
+      </div>
+    </div>
+
+  </div>
 </div>
