@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_02_26_143052) do
 
   # These are extensions that must be enabled in order to support this database
@@ -24,15 +25,6 @@ ActiveRecord::Schema.define(version: 2019_02_26_143052) do
     t.datetime "updated_at", null: false
     t.index ["chef_id"], name: "index_bookings_on_chef_id"
     t.index ["foodie_id"], name: "index_bookings_on_foodie_id"
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.integer "stars"
-    t.text "content"
-    t.integer "foodie_id"
-    t.integer "chef_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

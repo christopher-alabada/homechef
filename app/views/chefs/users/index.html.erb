@@ -1,13 +1,30 @@
-<%= link_to "home", root_path %>
+<div class="head-comment">
+  <h2>Nearby chefs matching your criteria</h2>
+</div>
 
-<h1>Chefs</h1>
-
-<ul>
-<% @chefs.each do |chef| %>
-  <li>
-    <%= link_to chef_path(chef) do %>
-      <%= chef.first_name %> <%= chef.last_name %>
+<div class="container">
+  <div class="row">
+    <% @chefs.each do |chef| %>
+      <div class="col-xs-12 col-sm-3">
+       <div class="card">
+        <div class="card-description">
+          <%= link_to chef_path(chef) do %>
+         <%= cl_image_tag(chef.photo, class: 'chef_image') %>
+         <h4> <%=  chef.first_name %> <%= chef.last_name %></h4>
+         <% end %>
+        </div>
+        </div>
+      </div>
     <% end %>
-  </li>
-<% end %>
-</ul>
+  </div>
+</div>
+
+<!-- <ul> -->
+<%# @chefs.each do |chef| %>
+<!--   <li> -->
+    <%#= link_to chef_path(chef) do %>
+      <%#= chef.first_name %> <%#= chef.last_name %>
+    <%# end %>
+<!--   </li> -->
+<%# end %>
+<!-- </ul> -->

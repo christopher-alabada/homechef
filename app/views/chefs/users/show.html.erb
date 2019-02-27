@@ -1,5 +1,29 @@
-<%= link_to "back to chefs", chefs_path %>
 
-<h1>Chef <%= @chef_full_name %> </h1>
+<br>
+<br>
+<br>
+
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1511344407683-b1172dce025f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
+</div>
+
+  <div class="profile-container">
+    <h1>About me</h1>
+    <p>I am the chef and owner of Masa, a three-Michelin-starred Japanese and sushi restaurant in San Francisco.</p>
+    <h4>Locations Serving: Shinjuku, Shibuya, Meguro</h4>
+    <h4>Cuisines: Japanese, Chinese, Italian, French</h4>
+  </div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3">
+       <div class="card">
+        <div class="card-description">
+          <h3>Chef <%= @chef_full_name %> </h3>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
 
 <div><%= link_to "Book", new_chef_bookings_path %></div>

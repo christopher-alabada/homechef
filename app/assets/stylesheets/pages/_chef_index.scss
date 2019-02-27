@@ -1,0 +1,104 @@
+.head-comment {
+  color: #7d7d7d;
+  padding-left: 150px;
+  padding-bottom: 20px;
+  padding-top: 80px;
+}
+.card {
+  height: 375px;
+  background-size: cover !important;
+  background-position: center;
+  color: #7d7d7d;
+  position: relative;
+  box-shadow: 1px 1px 1px 1px gray;
+  margin-bottom: 20px;
+}
+
+.card-description {
+  bottom: 10px;
+  left: 10px;
+  background-color: white;
+  padding: 5px;
+}
+
+.chef_image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-description h4 {
+  color: #7d7d7d;
+}
+
+.card-description h4:hover {
+  text-decoration: none;
+}
+
+.card-description p {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+
+/* navbar */
+.navbar-logo {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: white;
+  transition: all 0.3s ease;
+  height: 70px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Logo */
+.navbar-brand {
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.navbar-brand h4 {
+  margin-left: 10px
+}
+
+/* Right section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Basic navbar item */
+.navbar-item {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+/* Navbar link */
+.navbar-link {
+  color: #616668;
+  font-size: 14px;
+}
+.navbar-link:hover {
+  color: #da552f;
+  text-decoration: none;
+}
