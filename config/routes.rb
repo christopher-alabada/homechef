@@ -14,8 +14,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [:index, :create]
   end
 
-  namespace :chef do
-    resources :users, only: [:index, :show]
-    resources :bookings, only: [:index, :update]
-  end
+  # namespace :chef do
+  #   resources :users, only: [:index, :show]
+  #   resources :bookings, only: [:index, :update]
+  # end
 end
