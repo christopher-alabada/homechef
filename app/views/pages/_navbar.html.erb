@@ -1,4 +1,4 @@
-<div class="navbar-logo">
+<div class="navbar-logo" style="background: rgba(0,0,0,0);">
   <!-- Logo -->
 
   <div class="logo-h1">
@@ -9,9 +9,9 @@
   </div>
 
   <!-- Right Navigation -->
-  <div class="navbar-right hidden-xs hidden-sm">
+  <div class="navbar-right">
     <%= link_to "Chefs", chefs_path, class: "navbar-item navbar-link" %>
-
+    
     <% if user_signed_in? %>
       <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" %>
       <%= current_user.first_name %>
