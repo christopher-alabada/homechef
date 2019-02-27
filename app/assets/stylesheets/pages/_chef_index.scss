@@ -21,9 +21,72 @@
   padding: 5px;
 }
 
+p {
+  margin: 0;
+}
+
+.name {
+  position: absolute;
+  top:40px;
+  left: 55px;
+}
+
+.chef-name {
+  color: #233142;
+  font-size: 30px;
+  position: absolute;
+  top: 65px;
+  left: 55px;
+}
+
+.status {
+  position: absolute;
+  top: 200px;
+  left: 55px;
+}
+
+.book-state {
+  color:black;
+  position: absolute;
+  top: 200px;
+  left: 122px;
+}
+
+.booking-date {
+  text-align      : center;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+
+  color           : white;
+  background-color: #e88a1a;
+  border-radius   : 10px;
+  width           : 250px;
+  height          : 80px;
+  position        : absolute;
+  bottom          : 30px;
+  margin-left     : auto;
+  margin-right    : auto;
+  left            : 0;
+  right           : 0;
+  padding         : 5px;
+
+  box-shadow: 1px 1px 1px gray;
+}
+
 .chef_image {
   max-width: 100%;
   max-height: 100%;
+}
+
+.my_chef_image {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  box-shadow: 3px 3px 3px gray;
 }
 
 .card-description h4 {
