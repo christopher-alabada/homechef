@@ -5,10 +5,15 @@
 
 <div class="container">
 
+  <div class="row-wrapper">
+
   <div class="row">
 
+  <% @bookings.each do |booking| %>
+
+
+
     <!-- <div class="card-wapper"> -->
-      <% @bookings.each do |booking| %>
 
       <div class="col-xs-12 col-sm-4">
 
@@ -20,18 +25,18 @@
             <div class="booked-card-category">Status - <%= booking.state %></div>
             <div class="booked-card-date">Date - <%= booking.date %></div>
             <div class="booked-card-description">
+              My chef -
               <p><%= booking.chef.first_name %></p>
               <p><%= booking.chef.last_name %></p>
             </div>
-            <a class="booked-card-link" href="#" ></a>
           </div>
 
 
         </div>
-      </div>
        <% end %>
+      </div>
+      </div>
     </div>
   <!-- </div> -->
-</div>
 
 
