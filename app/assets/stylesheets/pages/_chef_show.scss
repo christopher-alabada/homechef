@@ -1,3 +1,9 @@
+.card{
+  height: 350px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+}
+
 .profile-container {
   margin-right: 30px;
 }
@@ -16,6 +22,7 @@
 .container {
   display: flex;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .card-wrapper {
@@ -34,7 +41,7 @@
 .chef-name {
   position: absolute;
   top: 10px;
-  left: 15px;
+  left: 10px;
   font-size: 15px;
   text-transform: uppercase;
   color: black;
