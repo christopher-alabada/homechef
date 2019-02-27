@@ -75,3 +75,57 @@ body {
   height: 100vh;
 }
 
+.explore h1 {
+  font-family: "Open Sans";
+  font-size: 40px;
+  // margin: 50px;
+  // padding: 25px;
+  padding: 30px 82px 35px;
+}
+
+.card-home {
+  height: 390px;
+  border-radius: 4px;
+  width: 281px;
+  background-size: cover !important;
+  background-position: center;
+  color: #7d7d7d;
+  position: relative;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px grey;
+  margin-bottom: 180px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.card-home-description {
+  bottom: 10px;
+  left: 10px;
+  background-color: white;
+}
+
+.chef-home-image {
+  width: 281px;
+  height: 265px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  width: 100%;
+}
+
+.chef-home-name {
+  size: 32px;
+  color: #000000;
+  font-family: "Source Sans Pro";
+  padding: 19px 15px;
+  margin-bottom: 8px;
+}
+
+.chef-home-cuisine {
+  size: 16px;
+  font-family: "Open Sans Hebrew";
+  color: #000000;
+  font-weight: lighter;
+  padding: 0px 17px;
+}
+
+.container {
+  width: 90.1%;
+}
