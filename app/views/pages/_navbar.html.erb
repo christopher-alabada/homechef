@@ -13,6 +13,7 @@
     <%= link_to "Chefs", chefs_path, class: "navbar-item navbar-link" %>
 
     <% if user_signed_in? %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" %>
       <%= current_user.first_name %>
     <% else %>
       <%= link_to "Log in", new_user_session_path, class: "navbar-item navbar-link" %>

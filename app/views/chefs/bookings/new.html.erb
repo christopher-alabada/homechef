@@ -3,7 +3,7 @@
 <div class="container">
   <%= @chef.first_name %>
 
-  <%= simple_form_for [@chef, @booking], url: foodie_bookings_path, method: 'get' do |f| %>
+  <%= simple_form_for [@chef, @booking], url: chef_bookings_path do |f| %>
     <%= f.input :date, class: 'form-control-sm' %>
     <%= f.submit %>
   <% end %>
