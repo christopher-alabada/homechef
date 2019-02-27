@@ -1,6 +1,9 @@
 class Foodie::BookingsController < ApplicationController
   def index
-    # @bookings = Booking.all
-    @bookings = policy_scope(Booking)
+    @bookings = policy_scope(Booking).where(foodie_id: current_user.id)
+  end
+
+  def create
+    raise
   end
 end
