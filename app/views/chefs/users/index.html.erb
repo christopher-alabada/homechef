@@ -6,8 +6,8 @@
   <div class="row">
     <% @chefs.each do |chef| %>
       <div class="col-xs-12 col-sm-3">
-       <div class="card">
-        <div class="card-description">
+       <div class="card-index">
+        <div class="card-description-index">
           <%= link_to chef_path(chef) do %>
          <%= cl_image_tag(chef.photo, class: 'chef_image') %>
          <h4> <%=  chef.first_name %> <%= chef.last_name %></h4>
@@ -18,13 +18,3 @@
     <% end %>
   </div>
 </div>
-
-<!-- <ul> -->
-<%# @chefs.each do |chef| %>
-<!--   <li> -->
-    <%#= link_to chef_path(chef) do %>
-      <%#= chef.first_name %> <%#= chef.last_name %>
-    <%# end %>
-<!--   </li> -->
-<%# end %>
-<!-- </ul> -->
