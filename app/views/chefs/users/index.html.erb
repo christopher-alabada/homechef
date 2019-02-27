@@ -12,6 +12,10 @@
          <%= cl_image_tag(chef.photo, class: 'chef_image') %>
          <h4> <%=  chef.first_name %> <%= chef.last_name %></h4>
          <% end %>
+         <% category = ['Italian', 'Chinese', 'Japanese', 'French', 'American', 'Thai', 'Spanish', 'Tarkish', 'Mexican'] %>
+         <h6><%= category.sample %></h6>
+         <% stars = ['★★★★★', '★★★☆☆', '★★☆☆☆', '★★★★☆'] %>
+         <p><%= stars.sample %></p>
         </div>
         </div>
       </div>
