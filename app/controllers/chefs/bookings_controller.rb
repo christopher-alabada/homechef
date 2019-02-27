@@ -14,6 +14,7 @@ class Chefs::BookingsController < ApplicationController
       foodie: current_user,
       chef: @chef
     )
+    authorize @booking
 
     if @booking.save
       redirect_to foodie_bookings_path
