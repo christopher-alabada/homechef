@@ -1,8 +1,9 @@
 .card{
-  height: 350px;
+  height: 450px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
 }
+
 
 .profile-container {
   margin-right: 30px;
@@ -27,6 +28,7 @@
 
 .card-wrapper {
   min-width: 300px;
+  min-height: 200px;
   box-shadow: 1px 1px 1px gray;
   text-align: center;
   display: flex;
