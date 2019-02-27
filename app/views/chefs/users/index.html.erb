@@ -8,7 +8,7 @@
       <div class="col-xs-12 col-sm-3">
        <div class="card">
         <div class="card-description">
-          <%= link_to chef_path(chef) do %>
+         <%= link_to chef_path(chef) do %>
          <%= cl_image_tag(chef.photo, class: 'chef_image') %>
          <h4> <%=  chef.first_name %> <%= chef.last_name %></h4>
          <% end %>

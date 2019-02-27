@@ -1,6 +1,3 @@
-User.destroy_all
-Booking.destroy_all
-
 puts "Seeding 50 users..."
 user = User.new(email: 'gertrude.carr@example.com', role: 'foodie', address: '8486 bruce st bakersfield oregon 20411',first_name: 'gertrude', last_name: 'carr', password: 'pass_gertrude')
 user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF51.jpg'
