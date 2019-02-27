@@ -1,3 +1,5 @@
+User.destroy_all
+Booking.destroy_all
 
 puts "Seeding 50 users..."
 user = User.new(email: 'gertrude.carr@example.com', role: 'foodie', address: '8486 bruce st bakersfield oregon 20411',first_name: 'gertrude', last_name: 'carr', password: 'pass_gertrude')
@@ -248,5 +250,9 @@ puts "Added #{user.first_name} #{user.last_name} - #{user.email} - Password = #{
 user = User.new(email: 'guy.rivera@example.com', role: 'chef', address: '5393 saddle dr escondido minnesota 23360',first_name: 'guy', last_name: 'rivera', password: 'pass_guy')
 user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM29.jpg'
 user.save!
+
+booking = Booking.new(date: DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M"), state: "Booked", foodie: User.where(role: 'foodie').all.sample, chef: User.where(role: 'chef').all.sample)
+booking.save!
+
 puts "Added #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 

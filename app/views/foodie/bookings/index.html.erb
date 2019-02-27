@@ -1,6 +1,12 @@
-<h1>Bookings</h1>
+<br>
+<br>
+<br>
+
+<h1>Your bookings</h1>
 
 
 <% @bookings.each do |booking| %>
-  <div><%= booking %></div>
+  <div class="card">
+      <div><%= booking.date %></div>
+  </div>
 <% end %>
