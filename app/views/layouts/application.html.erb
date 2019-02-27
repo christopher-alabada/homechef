@@ -3,41 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <title>Homechef</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
+  
   <body>
-
-    <div class="navbar-logo">
-      <!-- Logo -->
-
-      <div class="logo-h1">
-        <%= link_to root_path do %>
-          <%= image_tag "https://res.cloudinary.com/harrisongarovi/image/upload/v1551157460/chef-hat-md.png", alt: "logo", height: 55, width: 45  %>
-        <% end %>
-        <h1>Home Chef</h1>
-      </div>
-
-      <div class="navbar-left">
-        <%#= form_tag(chefs_path), method: :get) do %>
-          <%#= text_field_tag(:search, params[:search]) %>
-          <%#= submit_tag ("search") %>
-        <%# end %>
-      </div>
-
-      <!-- Right Navigation -->
-      <div class="navbar-right hidden-xs hidden-sm">
-        <a href="" class="navbar-item navbar-link">Become a Chef</a>
-        <a href="" class="navbar-item navbar-link">Help</a>
-        <a href="" class="navbar-item navbar-link">Sign Up</a>
-        <a href="" class="navbar-item navbar-link">Log in</a>
-      </div>
-    </div>
+    <%= render 'pages/navbar' %>
 
     <%= yield %>
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

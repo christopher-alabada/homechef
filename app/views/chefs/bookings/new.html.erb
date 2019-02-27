@@ -1,0 +1,10 @@
+<h1>New Booking</h1>
+
+<div class="container">
+  <%= @chef.first_name %>
+
+  <%= simple_form_for [@chef, @booking], url: chef_bookings_path do |f| %>
+    <%= f.input :date, class: 'form-control-sm' %>
+    <%= f.submit %>
+  <% end %>
+</div>
