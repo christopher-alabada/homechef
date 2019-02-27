@@ -12,37 +12,17 @@
 
       <div class="col-xs-12 col-sm-4">
 
-        <!-- <div class="card-index">
 
-
-          <div class="booking-date"><%= booking.date %></div>
-
-
-          <div class="name">
-            Name -
-          </div>
-
-          <div class="chef-name" style="text-transform: capitalize;">
-            <p><%= booking.chef.first_name %></p>
-            <p>   <%= booking.chef.last_name %></p>
-          </div>
-
-          <div class="status">
-          Status -
-          </div>
-          <div class="book-state"><%= booking.state %></div>
-
-          <div>
+          <div class="booked-card">
+            <div class="booked-chef">
             <%= cl_image_tag(booking.chef.photo, class: 'my_chef_image') %>
-          </div> -->
-
-          <div class="booked-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-            <div class="booked-card-category">Popular</div>
-            <div class="booked-card-description">
-              <h2>Le Wagon Shanghai</h2>
-              <p>Very cool city, the best</p>
             </div>
-            <img class="booked-card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+            <div class="booked-card-category">Status - <%= booking.state %></div>
+            <div class="booked-card-date">Date - <%= booking.date %></div>
+            <div class="booked-card-description">
+              <p><%= booking.chef.first_name %></p>
+              <p><%= booking.chef.last_name %></p>
+            </div>
             <a class="booked-card-link" href="#" ></a>
           </div>
 

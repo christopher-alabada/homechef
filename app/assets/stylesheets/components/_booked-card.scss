@@ -5,7 +5,11 @@
   background-position: center;
   color: white;
   position: relative;
+  background-color: #f3f8ff;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
 .booked-card-user {
   position: absolute;
   right: 10px;
@@ -20,6 +24,15 @@
   font-size: 15px;
   text-transform: uppercase;
 }
+
+.booked-card-date {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
 .booked-card-description {
   position: absolute;
   bottom: 10px;
