@@ -8,8 +8,6 @@ Rails.application.routes.draw do
   get '/chefs/:id/bookings/new', to: 'chefs/bookings#new', as: 'new_chef_bookings'
   post '/chefs/:id/bookings', to: 'chefs/bookings#create', as: 'chef_bookings'
 
-  # resources :chefs, only: [:index, :show, :create, :new]
-
   namespace :foodie do
     resources :bookings, only: [:index, :create]
   end
