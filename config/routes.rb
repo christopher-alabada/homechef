@@ -3,16 +3,16 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  # resources :chefs, only: [:index, :show] do
-  #   resources :bookings, only [:new, :create]
-  # end
+  resources :chefs, only: [:index, :show, :new] do
+    resources :bookings, only: [:new, :create]
+  end
 
-  resources :chefs, only: [:index, :show, :new, :create]
+  namespace :kitchen do
+    get '/foodie', to: 'users#show', as: 'foodie'
+    patch '/foodie/edit', to: 'users#update', as: 'edit_foodie'
+    get '/foodie/bookings', to: 'bookings#index', as: 'bookings'
 
-  get '/chefs/:id/bookings/new', to: 'chefs/bookings#new', as: 'new_chef_bookings'
-  post '/chefs/:id/bookings', to: 'chefs/bookings#create', as: 'chef_bookings'
-
-  namespace :foodie do
-    resources :bookings, only: [:index, :create]
+    get '/chef', to: 'chef#show', as: 'chef'
+    patch '/chef/edit', to: 'chef#update', as: 'edit_chef'
   end
 end

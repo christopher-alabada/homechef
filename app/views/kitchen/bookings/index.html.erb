@@ -1,0 +1,42 @@
+<div class="head-comment">
+  <h1 style="color: #233142">My Chefs</h1>
+</div>
+
+
+<div class="container">
+
+  <div class="row-wrapper">
+
+  <div class="row">
+
+  <% @bookings.each do |booking| %>
+
+
+
+    <!-- <div class="card-wapper"> -->
+
+      <div class="col-xs-12 col-sm-4">
+
+
+          <div class="booked-card">
+            <div class="booked-chef">
+            <%= cl_image_tag(booking.chef.user.photo, class: 'my_chef_image') %>
+            </div>
+            <div class="booked-card-category">Status - <%= booking.state %></div>
+            <div class="booked-card-date">Date - <%= booking.date %></div>
+            <div class="booked-card-description">
+              My chef -
+              <p><%= booking.chef.user.first_name %></p>
+              <p><%= booking.chef.user.last_name %></p>
+            </div>
+          </div>
+
+
+        </div>
+       <% end %>
+      </div>
+      </div>
+    </div>
+  <!-- </div> -->
+
+
