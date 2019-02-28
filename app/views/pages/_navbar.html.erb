@@ -15,7 +15,7 @@
       <p style="color: black; font-weight: lighter; font-size: 18px;">Hello <%= current_user.first_name %></p>
       <%= link_to "Chefs", chefs_path, class: "navbar-item navbar-link" %>
       <%= link_to "My Chefs", foodie_bookings_path, class: "navbar-item navbar-link" %>
-      <%= link_to "Become a Chef", foodie_bookings_path, class: "navbar-item navbar-link" %>
+      <%= link_to "Become a Chef", new_chef_path, class: "navbar-item navbar-link" %>
       <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" %>
     <% else %>
       <%= link_to "Chefs", chefs_path, class: "navbar-item navbar-link" %>
