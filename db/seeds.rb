@@ -29,224 +29,30 @@ user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM5
 user.save!
 puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
-user = User.new(email: 'charlene.barnes@example.com', address: '909 prospect rd costa mesa alabama 27152',first_name: 'charlene', last_name: 'barnes', password: 'pass_charlene')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF46.jpg'
+
+user = User.new(email: 'terri.austin@example.com', address: '3314 mcclellan rd carrollton california 83136',first_name: 'terri', last_name: 'austin', password: 'pass_terri')
+user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF49.jpg'
 user.save!
 puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
-user = User.new(email: 'earl.lucas@example.com', address: '3959 hickory creek dr high point florida 79432',first_name: 'earl', last_name: 'lucas', password: 'pass_earl')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM50.jpg'
+user = User.new(email: 'isobel.spencer@example.com', address: '9923 bruce st washington texas 42866',first_name: 'isobel', last_name: 'spencer', password: 'pass_isobel')
+user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF48.jpg'
 user.save!
 puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
-user = User.new(email: 'carmen.alexander@example.com', address: '5816 washington ave bridgeport maine 80070',first_name: 'carmen', last_name: 'alexander', password: 'pass_carmen')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF45.jpg'
+user = User.new(email: 'emily.brown@example.com', address: '4019 mockingbird hill allen maryland 11011',first_name: 'emily', last_name: 'brown', password: 'pass_emily')
+user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF47.jpg'
 user.save!
 puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
-user = User.new(email: 'marshall.pierce@example.com', address: '1455 avondale ave sacramento california 64139',first_name: 'marshall', last_name: 'pierce', password: 'pass_marshall')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM49.jpg'
+user = User.new(email: 'jorge.patterson@example.com', address: '6047 blossom hill rd laredo delaware 70277',first_name: 'jorge', last_name: 'patterson', password: 'pass_jorge')
+user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM51.jpg'
 user.save!
 puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'rachel.patterson@example.com', address: '1355 wycliff ave ventura arkansas 70992',first_name: 'rachel', last_name: 'patterson', password: 'pass_rachel')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF44.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'eric.may@example.com', address: '3727 valwood pkwy laredo hawaii 18760',first_name: 'eric', last_name: 'may', password: 'pass_eric')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM48.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'justin.fisher@example.com', address: '4247 nowlin rd rockford montana 83558',first_name: 'justin', last_name: 'fisher', password: 'pass_justin')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM47.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'daniel.ford@example.com', address: '9023 spring st grand prairie west virginia 87806',first_name: 'daniel', last_name: 'ford', password: 'pass_daniel')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM46.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'dave.hill@example.com', address: '2879 plum st indianapolis alabama 54622',first_name: 'dave', last_name: 'hill', password: 'pass_dave')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM45.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'gail.anderson@example.com', address: '9943 fincher rd lincoln south dakota 69618',first_name: 'gail', last_name: 'anderson', password: 'pass_gail')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF43.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-foodie1 = User.new(email: 'justin.bennett@example.com', address: '1142 preston rd corona california 18981',first_name: 'justin', last_name: 'bennett', password: 'pass_justin')
-foodie1.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM44.jpg'
-foodie1.save!
-puts "Added Foodie: #{foodie1.first_name} #{foodie1.last_name} - #{foodie1.email} - Password = #{foodie1.password}"
-
-foodie2 = User.new(email: 'sherri.grant@example.com', address: '4057 ash dr new haven alabama 76519',first_name: 'sherri', last_name: 'grant', password: 'pass_sherri')
-foodie2.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF41.jpg'
-foodie2.save!
-puts "Added Foodie: #{foodie2.first_name} #{foodie2.last_name} - #{foodie2.email} - Password = #{foodie2.password}"
-
-foodie3 = User.new(email: 'marilyn.myers@example.com', address: '6337 e pecan st little rock missouri 28829',first_name: 'marilyn', last_name: 'myers', password: 'pass_marilyn')
-foodie3.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF42.jpg'
-foodie3.save!
-puts "Added Foodie: #{foodie3.first_name} #{foodie3.last_name} - #{foodie3.email} - Password = #{foodie3.password}"
 
 
 puts
 puts "Adding Chefs..."
-user = User.new(email: 'christy.ramirez@example.com', address: '9398 daisy dr charleston idaho 30390',first_name: 'christy', last_name: 'ramirez', password: 'pass_christy')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF40.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'abigail.west@example.com', address: '6365 oak lawn ave boise hawaii 23415',first_name: 'abigail', last_name: 'west', password: 'pass_abigail')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF39.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'samuel.reed@example.com', address: '3713 cherry st flint ohio 28961',first_name: 'samuel', last_name: 'reed', password: 'pass_samuel')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM43.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'darlene.lane@example.com', address: '2386 forest ln el cajon west virginia 67705',first_name: 'darlene', last_name: 'lane', password: 'pass_darlene')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF38.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'jeffrey.crawford@example.com', address: '9259 eason rd coppell nebraska 72628',first_name: 'jeffrey', last_name: 'crawford', password: 'pass_jeffrey')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM42.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'wanda.prescott@example.com', address: '5893 white oak dr santa clara missouri 45078',first_name: 'wanda', last_name: 'prescott', password: 'pass_wanda')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF37.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'mattie.morris@example.com', address: '4572 w 6th st clarksville vermont 51256',first_name: 'mattie', last_name: 'morris', password: 'pass_mattie')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF36.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'angel.wilson@example.com', address: '2365 pecan acres ln santa maria new mexico 93645',first_name: 'angel', last_name: 'wilson', password: 'pass_angel')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM41.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'joshua.jensen@example.com', address: '6872 cherry st miramar new mexico 77166',first_name: 'joshua', last_name: 'jensen', password: 'pass_joshua')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM40.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'charlie.davidson@example.com', address: '9772 photinia ave fullerton south dakota 61413',first_name: 'charlie', last_name: 'davidson', password: 'pass_charlie')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM39.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'felicia.grant@example.com', address: '9631 samaritan dr memphis maryland 93673',first_name: 'felicia', last_name: 'grant', password: 'pass_felicia')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF35.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'scarlett.griffin@example.com', address: '1769 elgin st frisco texas 74615',first_name: 'scarlett', last_name: 'griffin', password: 'pass_scarlett')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF34.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'jar.ellis@example.com', address: '1927 samaritan dr el paso colorado 29693',first_name: 'jar', last_name: 'ellis', password: 'pass_jar')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM38.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'maxine.henderson@example.com', address: '8696 crockett st westminster oklahoma 24745',first_name: 'maxine', last_name: 'henderson', password: 'pass_maxine')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF33.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'ted.jordan@example.com', address: '4896 preston rd round rock arkansas 51824',first_name: 'ted', last_name: 'jordan', password: 'pass_ted')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM37.jpg'
-user.save!
-chef = Chef.new()
-chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
-chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
-chef.user = user
-chef.save!
-puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
 user = User.new(email: 'eric.marshall@example.com', address: '9896 thornridge cir woodbridge utah 36650',first_name: 'eric', last_name: 'marshall', password: 'pass_eric')
 user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM36.jpg'
 user.save!
