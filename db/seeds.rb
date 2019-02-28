@@ -1,33 +1,28 @@
 puts "Seeding users..."
-user = User.new(email: 'gertrude.carr@example.com', address: '8486 bruce st bakersfield oregon 20411',first_name: 'gertrude', last_name: 'carr', password: 'pass_gertrude')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF51.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
+foodie1 = User.new(email: 'gertrude.carr@example.com', address: '8486 bruce st bakersfield oregon 20411',first_name: 'gertrude', last_name: 'carr', password: 'pass_gertrude')
+foodie1.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF51.jpg'
+foodie1.save!
+puts "Added Foodie: #{foodie1.first_name} #{foodie1.last_name} - #{foodie1.email} - Password = #{foodie1.password}"
 
-user = User.new(email: 'ruby.berry@example.com', address: '6501 james st surprise north carolina 27467',first_name: 'ruby', last_name: 'berry', password: 'pass_ruby')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF50.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
+foodie2 = User.new(email: 'ruby.berry@example.com', address: '6501 james st surprise north carolina 27467',first_name: 'ruby', last_name: 'berry', password: 'pass_ruby')
+foodie2.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF50.jpg'
+foodie2.save!
+puts "Added Foodie: #{foodie2.first_name} #{foodie2.last_name} - #{foodie2.email} - Password = #{foodie2.password}"
 
-user = User.new(email: 'terri.austin@example.com', address: '3314 mcclellan rd carrollton california 83136',first_name: 'terri', last_name: 'austin', password: 'pass_terri')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF49.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
+foodie3 = User.new(email: 'terri.austin@example.com', address: '3314 mcclellan rd carrollton california 83136',first_name: 'terri', last_name: 'austin', password: 'pass_terri')
+foodie3.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF49.jpg'
+foodie3.save!
+puts "Added Foodie: #{foodie3.first_name} #{foodie3.last_name} - #{foodie3.email} - Password = #{foodie3.password}"
 
-user = User.new(email: 'isobel.spencer@example.com', address: '9923 bruce st washington texas 42866',first_name: 'isobel', last_name: 'spencer', password: 'pass_isobel')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF48.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
+foodie4 = User.new(email: 'emily.brown@example.com', address: '4019 mockingbird hill allen maryland 11011',first_name: 'emily', last_name: 'brown', password: 'pass_emily')
+foodie4.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF47.jpg'
+foodie4.save!
+puts "Added Foodie: #{foodie4.first_name} #{foodie4.last_name} - #{foodie4.email} - Password = #{foodie4.password}"
 
-user = User.new(email: 'emily.brown@example.com', address: '4019 mockingbird hill allen maryland 11011',first_name: 'emily', last_name: 'brown', password: 'pass_emily')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF47.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'jorge.patterson@example.com', address: '6047 blossom hill rd laredo delaware 70277',first_name: 'jorge', last_name: 'patterson', password: 'pass_jorge')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM51.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
+foodie5 = User.new(email: 'jorge.patterson@example.com', address: '6047 blossom hill rd laredo delaware 70277',first_name: 'jorge', last_name: 'patterson', password: 'pass_jorge')
+foodie5.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM51.jpg'
+foodie5.save!
+puts "Added Foodie: #{foodie5.first_name} #{foodie5.last_name} - #{foodie5.email} - Password = #{foodie5.password}"
 
 puts
 puts "Adding Chefs..."
