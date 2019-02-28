@@ -23,7 +23,8 @@
         <p class="stars">★★★★★</p>
         <p>Read reviews</p>
         <p>¥1000~</p>
-        <%#= link_to "Book", new_chef_bookings_path, class: 'btn btn-primary' %>
+
+        <%= link_to "Book", new_chef_booking_path(@chef), class: 'btn btn-primary' %>
         <label for="bookbtn" class="btn booklabel">Book</label>
           </div>
         <input type="checkbox" style="display: none;" id="bookbtn">
