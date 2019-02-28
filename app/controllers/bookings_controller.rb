@@ -5,21 +5,21 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
-  def create
+   def create
     @chef = Chef.find(params[:chef_id])
-    date = "#{params['booking']['date(2i)']}/#{params['booking']['date(3i)']}/#{params['booking']['date(1i)']} #{params['booking']['date(4i)']}:#{params['booking']['date(5i)']}"
-    @booking = Booking.new(
-      date: DateTime.strptime(date, "%m/%d/%Y %H:%M"),
-      state: "Booked",
-      foodie: current_user,
-      chef: @chef
-    )
+    @booking = Booking.new(booking_params)
     authorize @booking
 
     if @booking.save
       redirect_to foodie_bookings_path
     else
-      render :create
+      redirect_to chef_path(@chef)
     end
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(date: params[:booking][:date], state: "Booked", foodie: current_user, chef: @chef)
   end
 end
