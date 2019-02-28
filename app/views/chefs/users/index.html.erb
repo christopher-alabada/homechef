@@ -6,16 +6,19 @@
   <div class="row">
     <% @chefs.each do |chef| %>
       <div class="col-xs-12 col-sm-3">
-       <div class="card-index">
-        <div class="card-description-index">
+       <div class="card-home">
+        <div class="card-home-description">
           <%= link_to chef_path(chef) do %>
-         <%= cl_image_tag(chef.photo, class: 'chef_image') %>
-         <h4> <%= chef.first_name %> <%= chef.last_name %></h4>
-         <% end %>
+         <%= cl_image_tag(chef.photo, class: 'chef-home-image') %>
+         <%= cl_image_tag(chef.photo, class: 'chef-home-image-avatar') %>
+         <p class='chef-home-name'> <%= chef.first_name.capitalize %> <%= chef.last_name.capitalize %></p>
          <% category = ['Italian', 'Chinese', 'Japanese', 'French', 'American', 'Thai', 'Spanish', 'Turkish', 'Mexican'] %>
-         <h6><%= category.sample %></h6>
+         <div style='display: flex'>
+         <p class='chef-home-cuisine'><%= category.sample  %></p>
          <% stars = ['★★★★★', '★★★☆☆', '★★☆☆☆', '★★★★☆'] %>
-         <p><%= stars.sample %></p>
+         <p class='chef-home-cuisine'><%= stars.sample %></p>
+         </div>
+         <% end %>
         </div>
         </div>
       </div>
