@@ -11,6 +11,7 @@ class Chefs::UsersController < ApplicationController
   def show
     @chef = User.find(params[:id])
     @chef_full_name = "#{@chef.first_name} #{@chef.last_name}"
+    @booking = @chef.foodie_bookings.new
     # skip_authorization
   end
 end
