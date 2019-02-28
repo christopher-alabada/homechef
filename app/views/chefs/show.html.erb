@@ -1,7 +1,3 @@
-<br>
-<br>
-<br>
-
 <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1511344407683-b1172dce025f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
 </div>
 
@@ -46,7 +42,6 @@
           $(document).ready(function() {
                       $("#bookbtn").change(function(){
                         if(this.checked){
-                          console.log($(".popup")[0].style.display)
                           $(".popup")[0].style.display = "block";
                           $(".card-contents")[0].style.display = "none";
                         } else {
@@ -54,6 +49,8 @@
                         }
                       })
                     });
+          $('#datetimepicker').on('focus', ({ currentTarget }) => $(currentTarget).blur())
+          $("#datetimepicker").prop('readonly', false)
         </script>
         </div>
         <%= cl_image_tag(@chef.user.photo, class: 'card-user') %>
