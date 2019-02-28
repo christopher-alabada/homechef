@@ -123,7 +123,7 @@ p {
 .navbar-logo {
   background: white;
   transition: all 0.3s ease;
-  height: 70px;
+  height: 65px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
@@ -159,8 +159,10 @@ p {
 
 /* Navbar link */
 .navbar-link {
-  color: #FFFFFF;
-  font-size: 14px;
+  color: #000000;
+  font-size: 15px;
+  margin: 5px 15px 0px;
+  font-weight: lighter;
 }
 .navbar-link:hover {
   color: #da552f;
