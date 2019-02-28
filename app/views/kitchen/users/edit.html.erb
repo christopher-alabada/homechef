@@ -1,0 +1,12 @@
+<h1>edit profile</h1>
+
+
+<div class="container">
+  <%= simple_form_for @foodie, url: kitchen_update_foodie_path do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :address %>
+    <%= f.input :photo %>
+    <%= f.submit "Edit Profile", class: 'btn btn-success' %>
+  <% end %>
+</div>

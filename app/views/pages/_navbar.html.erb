@@ -15,13 +15,13 @@
     <% if user_signed_in? && !current_user.chef_id.nil?%>
       <p style="color: black; font-weight: lighter; font-size: 18px;">Hello <%= current_user.first_name %></p>
       <%= link_to "My schedules", kitchen_bookings_path, class: "navbar-item navbar-link" %>
-      <%= link_to "My chefs", kitchen_bookings_path, class: "navbar-item navbar-link" %>
+      <%= link_to "Kitchen", kitchen_foodie_path, class: "navbar-item navbar-link" %>
       <%= link_to "Chefs", chefs_path, class: "navbar-item navbar-link" %>
       <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" %>
     <% elsif user_signed_in? %>
       <p style="color: black; font-weight: lighter; font-size: 18px;">Hello <%= current_user.first_name %></p>
       <%= link_to "Chefs", chefs_path, class: "navbar-item navbar-link" %>
-      <%= link_to "My Chefs", kitchen_bookings_path, class: "navbar-item navbar-link" %>
+      <%= link_to "Kitchen", kitchen_chef_path, class: "navbar-item navbar-link" %>
       <%= link_to "Become a Chef", new_chef_path, class: "navbar-item navbar-link" %>
       <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" %>
     <% else %>

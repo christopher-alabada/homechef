@@ -1,1 +1,30 @@
-<h1>Kitchen Foodie <%= @foodie.first_name %></h1>
+<div class="head-comment">
+  <h1 style="color: #233142">Bookings</h1>
+</div>
+
+<div class="container kitchen-foodie">
+  <div class="kitchen-foodie-profile">
+    <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.photo, width: 200, class: 'kitchen-foodie-user-image') %></div>
+    <p><span>Name:</span> <%= current_user.first_name %> <%= current_user.last_name %></p>
+    <p><span>Email:</span> <%= current_user.email %></p>
+    <p><span>Address:</span> <%= current_user.address %></p>
+    <p><%= link_to "Edit profile", kitchen_edit_foodie_path, class: 'btn btn-success' %></p>
+  </div>
+
+  <div class="kitchen-foodie-bookings">
+    <% @bookings.each do |booking| %>
+      <div class="booked-card">
+        <div class="booked-chef">
+          <%= cl_image_tag(booking.chef.user.photo, class: 'my_chef_image') %>
+        </div>
+        <div class="booked-card-category">Status - <%= booking.state %></div>
+        <div class="booked-card-date">Date - <%= booking.date %></div>
+        <div class="booked-card-description">
+          <p><%= booking.chef.user.first_name %></p>
+          <p><%= booking.chef.user.last_name %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
