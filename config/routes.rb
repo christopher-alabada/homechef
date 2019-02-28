@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   #   resources :bookings, only [:new, :create]
   # end
 
-  resources :chefs, only: [:index, :show]
+  resources :chefs, only: [:index, :show, :new, :create]
 
   get '/chefs/:id/bookings/new', to: 'chefs/bookings#new', as: 'new_chef_bookings'
   post '/chefs/:id/bookings', to: 'chefs/bookings#create', as: 'chef_bookings'
