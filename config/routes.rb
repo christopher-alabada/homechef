@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :kitchen do
+    get 'chefs/show'
+  end
   root to: 'pages#home'
 
   devise_for :users
@@ -13,9 +16,9 @@ Rails.application.routes.draw do
     get '/foodie/bookings', to: 'bookings#index', as: 'foodie_bookings'
     patch '/foodie', to: 'users#update', as: 'update_foodie'
 
-    get '/chef', to: 'chef#show', as: 'chef'
-    get '/chef/edit', to: 'chef#edit', as: 'edit_chef'
+    get '/chef', to: 'chefs#show', as: 'chef'
+    get '/chef/edit', to: 'chefs#edit', as: 'edit_chef'
     get '/chef/bookings', to: 'bookings#index', as: 'chef_bookings'
-    patch '/chef', to: 'users#update', as: 'update_chef'
+    patch '/chef', to: 'chefs#update', as: 'update_chef'
   end
 end

@@ -12,17 +12,20 @@
   <div class="navbar-right">
     <%= link_to "Chefs", chefs_path, class: "navbar-item navbar-link" %>
     <% if user_signed_in? %>
-      <% if current_user.chef_id.nil? %>
-
-      <% else %>
-
-      <% end %>
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= cl_image_tag(current_user.photo, width: 50, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data: {toggle: "dropdown"}) %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li><%= link_to "Kitchen", kitchen_foodie_path %></li>
-            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+
+            <% if current_user.chef_id.nil? %>
+              <li><%= link_to "Kitchen", kitchen_foodie_path %></li>
+              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Chef's Kitchen", kitchen_chef_path %></li>
+              <li><%= link_to "Foodie's Kitchen", kitchen_foodie_path %></li>
+              <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+            <% end %>
+
           </ul>
         </div>
       </div>
