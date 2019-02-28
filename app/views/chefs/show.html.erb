@@ -27,8 +27,10 @@
                 <div class="col-md-6">
                   <%= simple_form_for [@chef, @booking], url: chef_bookings_path(@chef) do |f|  %>
                     <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
-                    <%= f.button :submit, "Book", class: "button" %>
+                    <p class='submit'><%= f.button :submit, "Book", class: "button" %></p>
                   <% end %>
+
+                  </%>
               </div>
           </div>
         <script>
