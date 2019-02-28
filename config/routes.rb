@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     patch '/foodie/edit', to: 'users#update', as: 'edit_foodie'
     get '/foodie/bookings', to: 'bookings#index', as: 'bookings'
 
-    get '/chef', to: 'chef#show', as: 'chef'
-    patch '/chef/edit', to: 'chef#update', as: 'edit_chef'
+    get '/chef', to: 'chefs#show', as: 'chef'
+    patch '/chef/edit', to: 'chefs#update', as: 'edit_chef'
   end
 end

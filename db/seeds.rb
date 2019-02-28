@@ -34,6 +34,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'paula.rogers@example.com', address: '7414 green rd st. louis minnesota 71498',first_name: 'paula', last_name: 'rogers', password: 'pass_paula')
@@ -44,6 +46,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'madison.rogers@example.com', address: '6384 smokey ln lansing missouri 67633',first_name: 'madison', last_name: 'rogers', password: 'pass_madison')
@@ -54,6 +58,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'lucy.gibson@example.com', address: '2939 eason rd tampa indiana 56317',first_name: 'lucy', last_name: 'gibson', password: 'pass_lucy')
@@ -64,6 +70,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'leona.sanders@example.com', address: '4888 mcclellan rd dumas maine 21194',first_name: 'leona', last_name: 'sanders', password: 'pass_leona')
@@ -74,6 +82,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'seth.ramirez@example.com', address: '7319 lakeshore rd scottsdale kentucky 60053',first_name: 'seth', last_name: 'ramirez', password: 'pass_seth')
@@ -84,6 +94,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'rodney.welch@example.com', address: '2065 crockett st centennial illinois 16240',first_name: 'rodney', last_name: 'welch', password: 'pass_rodney')
@@ -94,6 +106,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'leo.simmons@example.com', address: '4867 royal ln lowell alabama 29137',first_name: 'leo', last_name: 'simmons', password: 'pass_leo')
@@ -104,6 +118,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'joan.howell@example.com', address: '5215 e little york rd cedar rapids mississippi 11266',first_name: 'joan', last_name: 'howell', password: 'pass_joan')
@@ -114,6 +130,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'kristina.williamson@example.com', address: '7858 walnut hill ln athens new jersey 76186',first_name: 'kristina', last_name: 'williamson', password: 'pass_kristina')
@@ -124,6 +142,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'enrique.jordan@example.com', address: '5077 blossom hill rd roseburg kansas 78301',first_name: 'enrique', last_name: 'jordan', password: 'pass_enrique')
@@ -134,6 +154,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'marsha.sutton@example.com', address: '568 homestead rd caldwell north carolina 46722',first_name: 'marsha', last_name: 'sutton', password: 'pass_marsha')
@@ -144,6 +166,8 @@ chef.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef.user = user
 chef.save!
+user.chef = chef
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'barry.harvey@example.com', address: '8318 westheimer rd bellevue new york 30023',first_name: 'barry', last_name: 'harvey', password: 'pass_barry')
@@ -154,6 +178,8 @@ chef1.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef1.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef1.user = user
 chef1.save!
+user.chef = chef1
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'lydia.rivera@example.com', address: '1347 rolling green rd washington illinois 95538',first_name: 'lydia', last_name: 'rivera', password: 'pass_lydia')
@@ -164,6 +190,8 @@ chef2.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef2.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef2.user = user
 chef2.save!
+user.chef = chef2
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'guy.rivera@example.com', address: '5393 saddle dr escondido minnesota 23360',first_name: 'guy', last_name: 'rivera', password: 'pass_guy')
@@ -174,6 +202,8 @@ chef3.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef3.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef3.user = user
 chef3.save!
+user.chef = chef3
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 user = User.new(email: 'tyler.jenkins@example.com', address: '2576 n stelling rd cincinnati california 94478',first_name: 'tyler', last_name: 'jenkins', password: 'pass_tyler')
@@ -184,6 +214,8 @@ chef4.tagline = "Hi! I'm #{user.first_name} #{user.last_name}!"
 chef4.content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id nunc a metus malesuada sodales at in leo. Cras condimentum convallis sem, ac faucibus justo porttitor sed. Mauris dolor eros, pharetra eget nisi eu, faucibus euismod urna. Sed imperdiet, metus eget facilisis lacinia, est felis cursus mi, id commodo tortor velit sed quam."
 chef4.user = user
 chef4.save!
+user.chef = chef4
+user.save!
 puts "Added Chef: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
 
 puts
