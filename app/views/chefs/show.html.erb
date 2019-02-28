@@ -22,7 +22,7 @@
         <p class="stars">★★★★★</p>
         <p>Read reviews</p>
         <p>¥1000~</p>
-        <%= link_to "Book", new_chef_bookings_path, class: 'btn btn-primary' %>
+        <%= link_to "Book", new_chef_booking_path(@chef), class: 'btn btn-primary' %>
         </div>
         <%= cl_image_tag(@chef.user.photo, class: 'card-user') %>
       </div>
