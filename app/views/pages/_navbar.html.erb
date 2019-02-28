@@ -3,7 +3,7 @@
 
   <div class="logo-h1">
     <%= link_to root_path do %>
-      <%= image_tag "https://res.cloudinary.com/harrisongarovi/image/upload/v1551157460/chef-hat-md.png", alt: "logo", height: 55, width: 45  %>
+      <%= image_tag "https://res.cloudinary.com/harrisongarovi/image/upload/v1551157460/chef-hat-md.png", alt: "logo", height: 45, width: 35  %>
     <% end %>
     <h1>Home Chef</h1>
   </div>
@@ -11,7 +11,7 @@
   <!-- Right Navigation -->
   <div class="navbar-right">
     <%= link_to "Chefs", chefs_path, class: "navbar-item navbar-link" %>
-    
+
     <% if user_signed_in? %>
       <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" %>
       <%= current_user.first_name %>
