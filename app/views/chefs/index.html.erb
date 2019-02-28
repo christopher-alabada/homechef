@@ -1,24 +1,26 @@
-<div class="head-comment">
-  <h2>Nearby chefs matching your criteria</h2>
+<div class="explore">
+  <h1>Nearby chefs matching your criteria</h1>
 </div>
 
 <div class="container">
-  <div class="row">
-    <% @chefs.each do |chef| %>
-      <div class="col-xs-12 col-sm-3">
-        <div class="card-index">
-          <div class="card-description-index">
-            <%= link_to chef_path(chef) do %>
-            <%= cl_image_tag(chef.user.photo, class: 'chef_image') %>
-            <h4> <%= chef.user.first_name %> <%= chef.user.last_name %></h4>
-            <% end %>
-            <% category = ['Italian', 'Chinese', 'Japanese', 'French', 'American', 'Thai', 'Spanish', 'Tarkish', 'Mexican'] %>
-            <h6><%= category.sample %></h6>
-            <% stars = ['★★★★★', '★★★☆☆', '★★☆☆☆', '★★★★☆'] %>
-            <p><%= stars.sample %></p>
+    <div class="row">
+      <% @chefs.each do |chef| %>
+        <div class="col-xs-12 col-sm-3">
+          <div class="card-home-index">
+            <div class="card-home-description">
+              <%= link_to chef_path(chef) do %>
+                <%= cl_image_tag(chef.user.photo, class: 'chef-home-image') %>
+                <%= cl_image_tag(chef.user.photo, class: 'chef-home-image-avatar') %>
+                <p class='chef-home-name'> <%=  chef.user.first_name.capitalize %> <%= chef.user.last_name.capitalize %></p>
+                <% category = ['Italian', 'Chinese', 'Japanese', 'French', 'American', 'Thai', 'Spanish', 'Turkish', 'Mexican'] %>
+                <div style='display: flex'>
+                  <p class='chef-home-cuisine'><%= category.sample  %></p>
+                  <% stars = ['★★★★★', '★★★☆☆', '★★☆☆☆', '★★★★☆'] %>
+                  <p class='chef-home-cuisine'><%= stars.sample %></p>
+                </div>
+              <% end %>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-</div>
+      <% end %>
+    </div>
