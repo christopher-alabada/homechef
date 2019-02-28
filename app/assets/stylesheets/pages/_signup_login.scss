@@ -1,4 +1,26 @@
 .sl-page-wrapper {
+ position: relative;
+}
+
+.sl-form-wrapper {
+  position:absolute;
+  right: 300px;
+  padding: 20px;
   margin-left: 50px;
   margin-right: 50px;
+  margin-top: 30px;
+  width: 700px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
+
+.sl-page-wrapper h2 {
+  text-align: center;
+  margin-bottom:20px;
+}
+
+.sl-full-name {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
