@@ -1,6 +1,7 @@
 class Kitchen::UsersController < ApplicationController
   def show
-    @foodie = User.find(params[:id])
+    @foodie = User.find(current_user[:id])
+    authorize @foodie
   end
 
   def udpate
