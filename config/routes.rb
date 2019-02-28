@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  get 'chefs/index'
-  devise_for :users
   root to: 'pages#home'
 
-  # get '/chefs', to: 'chefs/users#index', as: 'chefs'
-  # get '/chefs/:id', to: 'chefs/users#show', as: 'chef'
+  devise_for :users
+
+  # resources :chefs, only: [:index, :show] do
+  #   resources :bookings, only [:new, :create]
+  # end
 
   resources :chefs, only: [:index, :show]
 
@@ -14,9 +15,4 @@ Rails.application.routes.draw do
   namespace :foodie do
     resources :bookings, only: [:index, :create]
   end
-
-  # namespace :chef do
-  #   resources :users, only: [:index, :show]
-  #   resources :bookings, only: [:index, :update]
-  # end
 end
