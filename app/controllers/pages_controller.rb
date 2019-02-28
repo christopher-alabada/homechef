@@ -4,5 +4,6 @@ class PagesController < ApplicationController
 
   def home
     @chefs = User.where(role: 'chef').order("RANDOM()").first(4)
+    @user = User.new
   end
 end

@@ -1,10 +1,19 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0)), url(https://res.cloudinary.com/harrisongarovi/image/upload/v1551167399/chef-coffee-cook-887827.jpg);>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)), url(https://www.reviewgeek.com/p/uploads/2018/09/c42b3491.jpg);>
   <div class="container">
-      <h1 style="text-align: center;color: white;text-shadow: 0.5px 0.5px 0.5px #000000;padding: 15px 0px 40px;">Homemade food, homemade experiences.</h1>
-      <p style="text-align: center;color: white;text-shadow: 0.5px 0.5px 0.5px #000000;">Request a chef and experience the best a fresh homemade dish has to offer.</p>
-      <div class="col text-center">
-      <a type="button" class="btn btn-primary" style="padding: 15px 21px 15px; margin: 50px;" href="https://home-chef.herokuapp.com/chefs">Explore a Chef</a>
-    </div>
+      <h1 style="text-align: center;color: white;text-shadow: 0.5px 0.5px 0.5px #000000;padding: 15px 0px 25px;">Homemade food, homemade experiences.</h1>
+        <p style="text-align: center;color: white;text-shadow: 0.5px 0.5px 0.5px #000000;">Request a chef and experience the best a fresh homemade dish has to offer.</p>
+        <div class="flex-grow-1 d-flex" style="display:flex; justify-content: center;">
+            <%= form_tag chefs_path, method: :get, class: "text-center" do %>
+            <%= text_field_tag :query,
+            params[:query],
+            class: "form-home mr-sm-2",
+            placeholder: "Location" %>
+            <% end %>
+            <a type="button" class="btn btn-danger" style="margin: 43px;padding: 5px 25px 5px; margin-left: 10px;" href="https://home-chef.herokuapp.com/chefs">Search</a>
+        </div>
+          <!-- <div class="col text-center">
+            <a type="button" class="btn btn-danger" style="padding: 8px 40px 8px;" href="https://home-chef.herokuapp.com/chefs">Search</a>
+    </div> -->
   </div>
 </div>
 
