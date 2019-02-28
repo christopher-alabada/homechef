@@ -1,13 +1,12 @@
 class Chefs::BookingsController < ApplicationController
   def new
-    @chef = User.find(params[:id])
+    @chef = Chef.find(params[:id])
     @booking = Booking.new
     authorize @booking
   end
 
   def create
-    @chef = User.find(params[:id])
-    # date = "#{params['booking']['date(2i)']}/#{params['booking']['date(3i)']}/#{params['booking']['date(1i)']} #{params['booking']['date(4i)']}:#{params['booking']['date(5i)']}"
+    @chef = Chef.find(params[:id])
     @booking = Booking.new(
       date: params[:booking][:date],
       state: "Booked",
