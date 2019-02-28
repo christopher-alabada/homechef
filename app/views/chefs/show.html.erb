@@ -6,7 +6,7 @@
   <div class="show-container">
     <div class="profile-container">
       <h1>About me</h1>
-      <p>I am the chef and owner of Masa, a three-Michelin-starred Japanese and sushi restaurant in San Francisco.</p>
+      <p><%= @chef.content %></p>
       <h4>Locations Serving : <%#= @chef. %>  Shinjuku, Shibuya, Meguro</h4>
       <h4>Cuisines: Japanese, Chinese, Italian, French</h4>
     </div>
@@ -20,7 +20,6 @@
         <p>Read reviews</p>
         <p>¥1000~</p>
 
-        <%= link_to "Book", new_chef_booking_path(@chef), class: 'btn btn-primary' %>
         <label for="bookbtn" class="btn booklabel">Book</label>
           </div>
         <input type="checkbox" style="display: none;" id="bookbtn">
@@ -45,10 +44,10 @@
                     });
         </script>
         </div>
-        <% if !@chef.user_photo.nil? %>
-        <%= cl_image_tag(@chef.user_photo, class: 'card-user') %>
+        <% if @chef.user_photo.url %>
+          <%= cl_image_tag(@chef.user_photo, class: 'card-user') %>
         <% else %>
-        <%= cl_image_tag(@chef.user.photo, class: 'card-user') %>
+          <%= cl_image_tag(@chef.user.photo, class: 'card-user') %>
         <% end %>
       </div>
     </div>
