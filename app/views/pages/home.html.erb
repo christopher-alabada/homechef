@@ -27,8 +27,8 @@
        <div class="card-home">
         <div class="card-home-description">
           <%= link_to chef_path(chef) do %>
-         <%= cl_image_tag(chef.photo, class: 'chef-home-image') %>
-         <p class='chef-home-name'> <%=  chef.first_name.capitalize %> <%= chef.last_name.capitalize %></p>
+         <%= cl_image_tag(chef.user.photo, class: 'chef-home-image') %>
+         <p class='chef-home-name'> <%=  chef.user.first_name.capitalize %> <%= chef.user.last_name.capitalize %></p>
          <p class='chef-home-cuisine'>Japanese</p>
          <% end %>
         </div>
