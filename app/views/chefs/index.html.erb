@@ -1,5 +1,7 @@
+<br>
+
 <div class="explore">
-  <h1>Nearby chefs matching your criteria</h1>
+  <h1>Explore all chefs</h1>
 </div>
 
 <div class="container">
@@ -18,6 +20,8 @@
                   <% stars = ['★★★★★', '★★★☆☆', '★★☆☆☆', '★★★★☆'] %>
                   <p class='chef-home-cuisine'><%= stars.sample %></p>
                 </div>
+                  <% price = ['¥1,000/hour', '¥2,000/hour', '¥3,000/hour', '¥4,000/hour', '¥5,000/hour', '¥6,000/hour', '¥7,000/hour'] %>
+                  <p class='chef-home-cuisine'><%= price.sample %></p>
               <% end %>
             </div>
           </div>
