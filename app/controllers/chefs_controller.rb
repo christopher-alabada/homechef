@@ -5,4 +5,9 @@ class ChefsController < ApplicationController
   def index
     @chefs = policy_scope(Chef)
   end
+
+  def show
+    @chef = Chef.find(params[:id])
+    @chef_full_name = "#{@chef.user.first_name} #{@chef.user.last_name}"
+  end
 end

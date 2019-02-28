@@ -1,0 +1,32 @@
+<br>
+<br>
+<br>
+
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1511344407683-b1172dce025f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
+</div>
+
+
+<div class="container">
+  <div class="show-container">
+    <div class="profile-container">
+      <h1>About me</h1>
+      <p><%= @chef.content %></p>
+      <h4>Locations Serving: Shinjuku, Shibuya, Meguro</h4>
+      <h4>Cuisines: Japanese, Chinese, Italian, French</h4>
+    </div>
+
+    <div class="card-wrapper">
+      <div class="banner-content">
+        <h3 class="chef-name"><%= @chef_full_name %> </h3>
+        <div class="card-description">
+        <p class="stars">★★★★★</p>
+        <p>Read reviews</p>
+        <p>¥1000~</p>
+        <%= link_to "Book", new_chef_bookings_path, class: 'btn btn-primary' %>
+        </div>
+        <%= cl_image_tag(@chef.user.photo, class: 'card-user') %>
+      </div>
+    </div>
+
+  </div>
+</div>
