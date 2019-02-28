@@ -8,6 +8,7 @@ class ChefsController < ApplicationController
 
   def show
     @chef = Chef.find(params[:id])
+    @booking = Booking.new
     @chef_full_name = "#{@chef.user.first_name} #{@chef.user.last_name}"
   end
 
