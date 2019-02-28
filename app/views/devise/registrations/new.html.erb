@@ -1,0 +1,71 @@
+<div class="sl-page-wrapper">
+<div class="container">
+  <div class="sl-container">
+  <div class="sl-form-wrapper">
+    <h2>Sign up</h2>
+
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <div class="sl-form-inputs">
+
+        <div class="sl-full-name">
+          <div class="sl-form-group" style="margin-right: 10px;">
+            <%= f.input :first_name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "first_name" },
+                        placeholder: 'Joël'%>
+          </div>
+          <div class="sl-form-group" id="sl-name">
+            <%= f.input :last_name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "last_name" },
+                        placeholder: 'Robuchon'%>
+          </div>
+        </div>
+        <div class="sl-form-group">
+          <%= f.input :address,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "address" },
+                      placeholder: 'ex. Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France'%>
+        </div>
+        <div class="sl-form-group">
+          <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" },
+                    placeholder: 'ex. i_love_cooking@eat.com'%>
+        </div>
+        <div class="sl-form-group">
+          <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" },
+                    placeholder: 'ex. password1234' %>
+        </div>
+        <div class="sl-form-group">
+          <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password" },
+                    placeholder: 'Check if correct' %>
+        </div>
+      </div>
+
+    <div class="form-actions sl-submit-btn">
+      <p><%= f.button :submit, "Sign up" %></p>
+    </div>
+
+    </div>
+    <% end %>
+
+    <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+      <%= link_to "Sign up", new_registration_path(resource_name) %>
+  　<% end %>
+  </div>
+  </div>
+</div>
+</div>

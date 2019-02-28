@@ -4,47 +4,38 @@
         <p style="text-align: center;color: white;text-shadow: 0.5px 0.5px 0.5px #000000;">Request a chef and experience the best a fresh homemade dish has to offer</p>
         <div class="flex-grow-1 d-flex" style="display:flex; justify-content: center;">
             <%= form_tag chefs_path, method: :get, class: "text-center" do %>
-            <%= text_field_tag :query,
-            params[:query],
-            class: "form-home mr-sm-2",
-            placeholder: "Location" %>
+              <%= text_field_tag :query, params[:query], class: "form-home mr-sm-2", placeholder: "Location" %>
             <% end %>
             <a type="button" class="btn btn-danger" style="margin: 43px;padding: 5px 25px 5px; margin-left: 10px;" href="https://home-chef.herokuapp.com/chefs">Search</a>
+
         </div>
-          <!-- <div class="col text-center">
-            <a type="button" class="btn btn-danger" style="padding: 8px 40px 8px;" href="https://home-chef.herokuapp.com/chefs">Search</a>
-    </div> -->
   </div>
 </div>
 
 <div class="explore">
-<h1>Explore Chefs</h1>
+  <h1>Explore Chefs</h1>
 
-<div class="container">
-  <div class="row">
-    <% @chefs.each do |chef| %>
-      <div class="col-xs-12 col-sm-3">
-       <div class="card-home">
-        <div class="card-home-description">
-          <%= link_to chef_path(chef) do %>
-         <%= cl_image_tag(chef.photo, class: 'chef-home-image') %>
-         <%= cl_image_tag(chef.photo, class: 'chef-home-image-avatar') %>
-         <p class='chef-home-name'> <%=  chef.first_name.capitalize %> <%= chef.last_name.capitalize %></p>
-         <% category = ['Italian', 'Chinese', 'Japanese', 'French', 'American', 'Thai', 'Spanish', 'Turkish', 'Mexican'] %>
-         <div style='display: flex'>
-         <p class='chef-home-cuisine'><%= category.sample  %></p>
-         <% stars = ['★★★★★', '★★★☆☆', '★★☆☆☆', '★★★★☆'] %>
-         <p class='chef-home-cuisine'><%= stars.sample %></p>
-         </div>
-         <!-- <p class='chef-home-cuisine'>Japanese</p> -->
-         <% end %>
+  <div class="container">
+    <div class="row">
+      <% @chefs.each do |chef| %>
+        <div class="col-xs-12 col-sm-3">
+          <div class="card-home">
+            <div class="card-home-description">
+              <%= link_to chef_path(chef) do %>
+                <%= cl_image_tag(chef.photo, class: 'chef-home-image') %>
+                <%= cl_image_tag(chef.photo, class: 'chef-home-image-avatar') %>
+                <p class='chef-home-name'> <%=  chef.first_name.capitalize %> <%= chef.last_name.capitalize %></p>
+                <% category = ['Italian', 'Chinese', 'Japanese', 'French', 'American', 'Thai', 'Spanish', 'Turkish', 'Mexican'] %>
+                <div style='display: flex'>
+                  <p class='chef-home-cuisine'><%= category.sample  %></p>
+                  <% stars = ['★★★★★', '★★★☆☆', '★★☆☆☆', '★★★★☆'] %>
+                  <p class='chef-home-cuisine'><%= stars.sample %></p>
+                </div>
+              <% end %>
+            </div>
+          </div>
         </div>
-        </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
-
-
-
 </div>
