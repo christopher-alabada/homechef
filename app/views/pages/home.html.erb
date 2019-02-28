@@ -28,8 +28,15 @@
         <div class="card-home-description">
           <%= link_to chef_path(chef) do %>
          <%= cl_image_tag(chef.photo, class: 'chef-home-image') %>
+         <%= cl_image_tag(chef.photo, class: 'chef-home-image-avatar') %>
          <p class='chef-home-name'> <%=  chef.first_name.capitalize %> <%= chef.last_name.capitalize %></p>
-         <p class='chef-home-cuisine'>Japanese</p>
+         <% category = ['Italian', 'Chinese', 'Japanese', 'French', 'American', 'Thai', 'Spanish', 'Turkish', 'Mexican'] %>
+         <div style='display: flex'>
+         <p class='chef-home-cuisine'><%= category.sample  %></p>
+         <% stars = ['★★★★★', '★★★☆☆', '★★☆☆☆', '★★★★☆'] %>
+         <p class='chef-home-cuisine'><%= stars.sample %></p>
+         </div>
+         <!-- <p class='chef-home-cuisine'>Japanese</p> -->
          <% end %>
         </div>
         </div>
