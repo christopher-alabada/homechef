@@ -1,4 +1,4 @@
-puts "Seeding 50 users..."
+puts "Seeding users..."
 user = User.new(email: 'gertrude.carr@example.com', address: '8486 bruce st bakersfield oregon 20411',first_name: 'gertrude', last_name: 'carr', password: 'pass_gertrude')
 user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF51.jpg'
 user.save!
@@ -28,28 +28,6 @@ user = User.new(email: 'jorge.patterson@example.com', address: '6047 blossom hil
 user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM51.jpg'
 user.save!
 puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-
-user = User.new(email: 'terri.austin@example.com', address: '3314 mcclellan rd carrollton california 83136',first_name: 'terri', last_name: 'austin', password: 'pass_terri')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF49.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'isobel.spencer@example.com', address: '9923 bruce st washington texas 42866',first_name: 'isobel', last_name: 'spencer', password: 'pass_isobel')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF48.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'emily.brown@example.com', address: '4019 mockingbird hill allen maryland 11011',first_name: 'emily', last_name: 'brown', password: 'pass_emily')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageF47.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
-user = User.new(email: 'jorge.patterson@example.com', address: '6047 blossom hill rd laredo delaware 70277',first_name: 'jorge', last_name: 'patterson', password: 'pass_jorge')
-user.remote_photo_url = 'https://www.designskilz.com/random-users/images/imageM51.jpg'
-user.save!
-puts "Added Foodie: #{user.first_name} #{user.last_name} - #{user.email} - Password = #{user.password}"
-
 
 puts
 puts "Adding Chefs..."
