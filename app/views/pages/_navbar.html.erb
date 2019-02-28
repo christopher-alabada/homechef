@@ -12,7 +12,7 @@
   <div class="navbar-right">
 
     <% if user_signed_in? %>
-      <p style="color: black; font-weight: lighter; font-size: 18px;">Hello, <%= current_user.first_name %></p>
+      <p style="color: black; font-weight: lighter; font-size: 18px;">Hello <%= current_user.first_name %></p>
       <%= link_to "Chefs", chefs_path, class: "navbar-item navbar-link" %>
       <%= link_to "My Chefs", foodie_bookings_path, class: "navbar-item navbar-link" %>
       <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-item navbar-link" %>
