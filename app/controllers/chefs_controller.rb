@@ -13,12 +13,14 @@ class ChefsController < ApplicationController
   end
 
   def new
-    @chefs = Chef.new
-    authorize(@chefs)
+    @chef = Chef.new
+    authorize(@chef)
   end
 
   def create
+    # raise
     @chef = Chef.new(permit_create_chef)
+    @chef.user = current_user
     if @chef.save
       redirect_to chef_path(@chef)
     else
@@ -29,6 +31,9 @@ class ChefsController < ApplicationController
   private
 
   def permit_create_chef
-    params.require(:chef).permit(:tagline, :content, :banner_photo, :card_photo, :user_photo)
+    params.require(:chef).permit(:tagline, :content,
+      :banner_photo, :banner_photo_cache,
+      :card_photo, :card_photo_cache,
+      :user_photo, :user_photo_cache)
   end
 end
