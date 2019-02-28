@@ -18,10 +18,11 @@ class ChefsController < ApplicationController
   end
 
   def create
-    # raise
     @chef = Chef.new(permit_create_chef)
-    @chef.user = current_user
+    @chef.user = User.find(current_user.id)
     if @chef.save
+      current_user.chef_id = @chef.id
+      current_user.save
       redirect_to chef_path(@chef)
     else
       render :new
