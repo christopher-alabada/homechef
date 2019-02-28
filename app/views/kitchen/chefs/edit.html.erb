@@ -1,0 +1,16 @@
+<h1>edit chef's profile</h1>
+
+
+<div class="container">
+  <%= simple_form_for @chef, url: kitchen_update_chef_path do |f| %>
+    <%= f.input :tagline %>
+    <%= f.input :content %>
+    <%= f.input :location %>
+    <%= f.input :radius %>
+    <%= f.input :units, collection: Chef::UNITS, selected: "km" %>
+    <%= f.input :banner_photo %>
+    <%= f.input :card_photo %>
+    <%= f.input :user_photo %>
+    <%= f.submit "Edit Chef's Profile", class: 'btn btn-success' %>
+  <% end %>
+</div>

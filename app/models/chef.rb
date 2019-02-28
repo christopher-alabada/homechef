@@ -3,7 +3,11 @@ class Chef < ApplicationRecord
 
   acts_as_taggable_on :tags
 
+  UNITS = ['mi', 'km']
+
   mount_uploader :banner_photo, PhotoUploader
   mount_uploader :card_photo, PhotoUploader
   mount_uploader :user_photo, PhotoUploader
+
+  validates :units, inclusion: { in: UNITS }
 end
