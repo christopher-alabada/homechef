@@ -19,48 +19,47 @@
       <div class="banner-content">
         <h3 class="chef-name"><%= @chef_full_name %> </h3>
         <div class="card-description">
+          <div class="card-contents">
         <p class="stars">★★★★★</p>
         <p>Read reviews</p>
         <p>¥1000~</p>
-        <%= link_to "Book", new_chef_bookings_path, class: 'btn btn-primary' %>
+        <%#= link_to "Book", new_chef_bookings_path, class: 'btn btn-primary' %>
+        <label for="bookbtn" class="btn booklabel">Book</label>
+          </div>
+        <input type="checkbox" style="display: none;" id="bookbtn">
+          <div class="popup" style="display: none;">
+            <!-- <h4>New Booking</h4> -->
+            <div class="booking-container">
+<!--              <h3 class="chefs-name">Chef : <%#= @chef.first_name.capitalize %></h3>
+ -->
+              <div class="row">
+                <div class="col-md-6">
+                  <%= simple_form_for [@chef, @booking], url: chef_bookings_path(@chef, @booking) do |f|  %>
+                    <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+                    <%= f.button :submit, "Book", class: "button" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <script>
+          $(document).ready(function() {
+                      $("#bookbtn").change(function(){
+                        if(this.checked){
+                          console.log($(".popup")[0].style.display)
+                          $(".popup")[0].style.display = "block";
+                          $(".card-contents")[0].style.display = "none";
+                        } else {
+                          $(".popup")[0].style.display = "none";
+                        }
+                      })
+                    });
+        </script>
         </div>
         <%= cl_image_tag(@chef.photo, class: 'card-user') %>
       </div>
     </div>
-
   </div>
 
-
-  <h1>New Booking</h1>
-
-  <div class="booking-container">
-   <h3 class="chefs-name">Chef : <%= @chef.first_name %></h3>
-
-
-
-<!-- copy booking feature here -->
-
-
-
-<%#= simple_form_for [@chef, @booking], url: chef_bookings_path do |f| %>
-    <%#= f.input :date, class: 'form-control-sm' %>
-    <%#= f.submit %>
-  <%# end %>
-
-
-<div class="row">
-  <div class="col-md-6">
-    <!-- <label for="">Date</label> -->
-    <%= simple_form_for [@chef, @booking], url: chef_bookings_path(@chef, @booking) do |f|  %>
-      <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%# link_to chef_bookings_path do %>
-      <%= f.button :submit, "Go", class: "btn btn-primary" %>
-      <%# end %>
-   <% end %>
-  </div>
-</div>
-
-<br/>
-  </div>
 
 </div>

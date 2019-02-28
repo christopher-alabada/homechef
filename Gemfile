@@ -15,6 +15,8 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 gem 'devise'
 gem 'cloudinary', '~> 1.9.1'
