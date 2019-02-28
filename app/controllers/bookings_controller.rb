@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
-   def create
+    def create
     @chef = Chef.find(params[:chef_id])
     @booking = Booking.new(booking_params)
     @booking.foodie = User.find(current_user.id)
