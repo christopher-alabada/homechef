@@ -1,0 +1,20 @@
+<h1>Cook for other</h1>
+
+<%= simple_form_for(@chefs) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :tagline %>
+  <%= f.input :content %>
+
+  <%= f.input :banner_photo %>
+  <%= f.input :banner_photo_cache, as: :hidden %>
+
+  <%= f.input :card_photo %>
+  <%= f.input :card_photo_cache, as: :hidden %>
+
+  <%= f.input :user_photo %>
+  <%= f.input :user_photo_cache, as: :hidden %>
+
+  <%= f.button :submit, "Become" %>
+
+<% end %>
