@@ -5,13 +5,15 @@ class Chefs::BookingsController < ApplicationController
     authorize @booking
   end
 
-  def create
-    @chef = Chef.find(params[:id])
+   def create
+    @chef = Chef.find(params[:chef_id])
     @booking = Booking.new(booking_params)
+    @booking.foodie = User.find(current_user.id)
+    @booking.chef = Chef.find(params[:chef_id])
     authorize @booking
 
     if @booking.save
-      redirect_to foodie_bookings_path
+      redirect_to kitchen_bookings_path
     else
       redirect_to chef_path(@chef)
     end
@@ -20,6 +22,6 @@ class Chefs::BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(date: params[:booking][:date], state: "Booked", foodie: current_user, chef: @chef)
+    params.require(:booking).permit(:date)
   end
 end
