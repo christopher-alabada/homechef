@@ -1,0 +1,24 @@
+<div class="head-comment">
+  <h2>Nearby chefs matching your criteria</h2>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @chefs.each do |chef| %>
+      <div class="col-xs-12 col-sm-3">
+       <div class="card-index">
+        <div class="card-description-index">
+          <%= link_to chef_path(chef) do %>
+         <%= cl_image_tag(chef.photo, class: 'chef_image') %>
+         <h4> <%= chef.first_name %> <%= chef.last_name %></h4>
+         <% end %>
+         <% category = ['Italian', 'Chinese', 'Japanese', 'French', 'American', 'Thai', 'Spanish', 'Tarkish', 'Mexican'] %>
+         <h6><%= category.sample %></h6>
+         <% stars = ['★★★★★', '★★★☆☆', '★★☆☆☆', '★★★★☆'] %>
+         <p><%= stars.sample %></p>
+        </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

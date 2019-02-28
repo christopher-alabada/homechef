@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :foodie_bookings, class_name: 'Booking', foreign_key: 'foodie_id'
   has_many :chef_bookings, class_name: 'Booking', foreign_key: 'chef_id'
+  belongs_to :chef
 
   ROLES = ['foodie', 'chef']
 
