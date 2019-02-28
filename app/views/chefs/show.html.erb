@@ -1,7 +1,3 @@
-<br>
-<br>
-<br>
-
 <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1511344407683-b1172dce025f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
 </div>
 
@@ -11,7 +7,7 @@
     <div class="profile-container">
       <h1>About me</h1>
       <p>I am the chef and owner of Masa, a three-Michelin-starred Japanese and sushi restaurant in San Francisco.</p>
-      <h4>Locations Serving: Shinjuku, Shibuya, Meguro</h4>
+      <h4>Locations Serving : <%#= @chef. %>  Shinjuku, Shibuya, Meguro</h4>
       <h4>Cuisines: Japanese, Chinese, Italian, French</h4>
     </div>
 
@@ -29,25 +25,17 @@
           </div>
         <input type="checkbox" style="display: none;" id="bookbtn">
           <div class="popup" style="display: none;">
-            <!-- <h4>New Booking</h4> -->
-            <div class="booking-container">
-<!--              <h3 class="chefs-name">Chef : <%#= @chef.first_name.capitalize %></h3>
- -->
-              <div class="row">
                 <div class="col-md-6">
                   <%= simple_form_for [@chef, @booking], url: chef_bookings_path(@chef) do |f|  %>
                     <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
                     <%= f.button :submit, "Book", class: "button" %>
                   <% end %>
-                </div>
               </div>
-            </div>
           </div>
         <script>
           $(document).ready(function() {
                       $("#bookbtn").change(function(){
                         if(this.checked){
-                          console.log($(".popup")[0].style.display)
                           $(".popup")[0].style.display = "block";
                           $(".card-contents")[0].style.display = "none";
                         } else {
@@ -57,7 +45,11 @@
                     });
         </script>
         </div>
+        <% if !@chef.user_photo.nil? %>
+        <%= cl_image_tag(@chef.user_photo, class: 'card-user') %>
+        <% else %>
         <%= cl_image_tag(@chef.user.photo, class: 'card-user') %>
+        <% end %>
       </div>
     </div>
   </div>
