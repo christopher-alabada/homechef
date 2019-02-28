@@ -29,4 +29,38 @@
     </div>
 
   </div>
+
+
+  <h1>New Booking</h1>
+
+  <div class="booking-container">
+   <h3 class="chefs-name">Chef : <%= @chef.first_name %></h3>
+
+
+
+<!-- copy booking feature here -->
+
+
+
+<%#= simple_form_for [@chef, @booking], url: chef_bookings_path do |f| %>
+    <%#= f.input :date, class: 'form-control-sm' %>
+    <%#= f.submit %>
+  <%# end %>
+
+
+<div class="row">
+  <div class="col-md-6">
+    <!-- <label for="">Date</label> -->
+    <%= simple_form_for [@chef, @booking], url: chef_bookings_path(@chef, @booking) do |f|  %>
+      <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%# link_to chef_bookings_path do %>
+      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+      <%# end %>
+   <% end %>
+  </div>
+</div>
+
+<br/>
+  </div>
+
 </div>

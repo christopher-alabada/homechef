@@ -7,9 +7,9 @@ class Chefs::BookingsController < ApplicationController
 
   def create
     @chef = User.find(params[:id])
-    date = "#{params['booking']['date(2i)']}/#{params['booking']['date(3i)']}/#{params['booking']['date(1i)']} #{params['booking']['date(4i)']}:#{params['booking']['date(5i)']}"
+    # date = "#{params['booking']['date(2i)']}/#{params['booking']['date(3i)']}/#{params['booking']['date(1i)']} #{params['booking']['date(4i)']}:#{params['booking']['date(5i)']}"
     @booking = Booking.new(
-      date: DateTime.strptime(date, "%m/%d/%Y %H:%M"),
+      date: params[:booking][:date],
       state: "Booked",
       foodie: current_user,
       chef: @chef
