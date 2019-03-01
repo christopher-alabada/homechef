@@ -16,7 +16,7 @@
                 <p class='chef-home-name'><%=  chef.user.first_name.capitalize %> <%= chef.user.last_name.capitalize %></p>
 
                 <div style='display: flex'>
-                  <p class='chef-home-cuisine'>
+                  <p class='chef-home-cuisine' style="margin-top: 5px;">
                     <%
                       tags = chef.tag_list.map do |tag|
                         tag.capitalize
@@ -26,6 +26,7 @@
                   </p>
                 </div>
                   <p class='chef-home-cuisine'>&#165;<%= chef.price %> / hour</p>
+                <p class='chef-home-cuisine' style="font-size: 13px; margin-top: 3px"><%= chef.tagline %></p>
               <% end %>
             </div>
           </div>
