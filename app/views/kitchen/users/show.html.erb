@@ -24,12 +24,12 @@
 
 
   <div class="kitchen-foodie-bookings">
+    <div class="bookings">
+      <h1>Booked Chefs</h1>
+    </div>
     <% @bookings.each do |booking| %>
       <div class="booked-card">
           <div class="booked-chef">
-            <div class="bookings">
-            <h1>Booked Chefs</h1>
-            </div>
             <%= cl_image_tag(booking.chef.user.photo, class: 'my_chef_image') %>
           </div>
           <div class="booked-card-category">Schedule<%= booking.state %></div>
