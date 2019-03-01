@@ -4,7 +4,11 @@ class ChefsController < ApplicationController
 
   def index
     if params[:query].present?
-
+      query = params[:query].downcase
+      locations = policy_scope(Chef).where('lower(location) = ?', query.downcase)
+      foods = Chef.tagged_with(query)
+      @chefs = locations + foods
+      # raise
     else
       @chefs = policy_scope(Chef)
     end
