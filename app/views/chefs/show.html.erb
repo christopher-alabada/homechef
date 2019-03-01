@@ -1,5 +1,5 @@
 <body>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path(@chef.card_photo) %>');">
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path(@chef.card_photo) %>');background-position: center;">
 </div>
 
 <% tags = @chef.tag_list.map { |tag| tag.capitalize } %>
