@@ -20,13 +20,21 @@
   color: #929aab;
 }
 
+
 .show-container {
+  position: relative;
+  right: 10px;
   display: flex;
+  justify-content: space-around;
   margin-bottom: 50px;
   margin-top: 50px;
 }
 
 .card-wrapper {
+  margin-left: 50px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
   min-width: 300px;
   min-height: 300px;
   box-shadow: 1px 1px 1px gray;
