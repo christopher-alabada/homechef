@@ -18,21 +18,19 @@
   <div class="container">
     <div class="row">
       <% @chefs.each do |chef| %>
+        <% tags = chef.tag_list.map { |tag| tag.capitalize } %>
         <div class="col-xs-12 col-sm-3">
           <div class="card-home">
             <div class="card-home-description">
               <%= link_to chef_path(chef) do %>
-                <%= cl_image_tag(chef.user.photo, class: 'chef-home-image') %>
+                <%= cl_image_tag(chef.card_photo, class: 'chef-home-image') %>
                 <%= cl_image_tag(chef.user.photo, class: 'chef-home-image-avatar') %>
-                <p class='chef-home-name'> <%=  chef.user.first_name.capitalize %> <%= chef.user.last_name.capitalize %></p>
-                <% category = ['Italian', 'Chinese', 'Japanese', 'French', 'American', 'Thai', 'Spanish', 'Turkish', 'Mexican'] %>
+                <p class='chef-home-name'><%=  chef.user.first_name.capitalize %> <%= chef.user.last_name.capitalize %></p>
+
                 <div style='display: flex'>
-                  <p class='chef-home-cuisine'><%= category.sample  %></p>
-                  <% stars = ['★★★★★', '★★★☆☆', '★★☆☆☆', '★★★★☆'] %>
-                  <p class='chef-home-cuisine'><%= stars.sample %></p>
+                  <p class='chef-home-cuisine'><%= tags.join(", ") %></p>
                 </div>
-                <% price = ['¥1,000/hour', '¥2,000/hour', '¥3,000/hour', '¥4,000/hour', '¥5,000/hour', '¥6,000/hour', '¥7,000/hour'] %>
-                  <p class='chef-home-cuisine'><%= price.sample %></p>
+                  <p class='chef-home-cuisine'>&#165;<%= chef.price %> / hour</p>
               <% end %>
                 </div>
                 </div>

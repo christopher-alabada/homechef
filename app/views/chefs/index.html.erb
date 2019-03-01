@@ -13,8 +13,8 @@
               <%= link_to chef_path(chef) do %>
                 <%= cl_image_tag(chef.card_photo, class: 'chef-home-image') %>
                 <%= cl_image_tag(chef.user.photo, class: 'chef-home-image-avatar') %>
-                <p class='chef-home-name'> <%=  chef.user.first_name.capitalize %> <%= chef.user.last_name.capitalize %></p>
-                <%# category = ['Italian', 'Chinese', 'Japanese', 'French', 'American', 'Thai', 'Spanish', 'Turkish', 'Mexican'] %>
+                <p class='chef-home-name'><%=  chef.user.first_name.capitalize %> <%= chef.user.last_name.capitalize %></p>
+
                 <div style='display: flex'>
                   <p class='chef-home-cuisine'>
                     <%
