@@ -1,9 +1,15 @@
 .kitchen-foodie {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 55vh;
 }
 
 .kitchen-foodie-profile {
+  margin: 25px 0px 0px;
+  margin-right: 150px;
+  box-shadow: 1px 3px 7.5px 1px grey;
+  padding: 25px 15px 25px;
+  border-radius: 4px;
   width: 500px;
 }
 
@@ -17,4 +23,12 @@
 
 .kitchen-foodie-user-image {
   border-radius: 50%;
+  box-shadow: 1px 3px 7.5px 0px grey;
+}
+
+.edit {
+  padding: 8px 8px 8px;
+  margin: 5px 15px 5px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2.5px 0px grey;
 }
