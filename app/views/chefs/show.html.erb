@@ -46,11 +46,7 @@
                     });
         </script>
         </div>
-        <% if @chef.user_photo.url %>
-          <%= cl_image_tag(@chef.user_photo, class: 'card-user') %>
-        <% else %>
-          <%= cl_image_tag(@chef.user.photo, class: 'card-user') %>
-        <% end %>
+        <%= cl_image_tag(@chef.user.photo, class: 'card-user') %>
       </div>
     </div>
   </div>
