@@ -3,7 +3,7 @@ class Kitchen::ChefsController < ApplicationController
 
   def show
     authorize @chef
-    @bookings = Booking.where(chef: @chef)
+    @bookings = Booking.where(chef: @chef).order(date: :desc)
   end
 
   def edit
