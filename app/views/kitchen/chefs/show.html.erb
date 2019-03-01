@@ -1,8 +1,9 @@
-<div class="head-comment">
-  <h1 style="color: #233142">Bookings</h1>
-</div>
-
 <div class="container kitchen-foodie">
+
+
+<div class="kitchen-foodie-profile-container" style="margin-bottom: 100px;">
+  <h1 style="color: #233142">Bookings</h1>
+
   <div class="kitchen-foodie-profile">
     <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.photo, width: 200, class: 'kitchen-foodie-user-image') %></div>
     <div><%= cl_image_tag(current_user.chef.banner_photo, width: 200) %></div>
@@ -14,6 +15,13 @@
     <p><span>Radius:</span> <%= current_user.chef.radius %> <%= current_user.chef.units %></p>
     <p><%= link_to "Edit profile", kitchen_edit_chef_path, class: 'btn btn-success' %></p>
   </div>
+
+</div>
+
+<div class="kitchen-foodie-bookings-container">
+    <div class="book-chef-title">
+   <h1>Your foodies</h1>
+   </div>
 
   <div class="kitchen-foodie-bookings">
     <% @bookings.each do |booking| %>
@@ -30,5 +38,6 @@
       </div>
     <% end %>
   </div>
+</div>
 
 </div>

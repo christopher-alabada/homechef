@@ -11,22 +11,26 @@
 <br>
 
 <div class="container kitchen-foodie">
-  <div class="kitchen-foodie-profile">
-    <div class="my-profile">
+
+
+  <div class="kitchen-foodie-profile-container">
     <h1>My Profile</h1>
+    <div class="kitchen-foodie-profile">
+      <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.photo, width: 200, class: 'kitchen-foodie-user-image') %></div>
+      <p class="chef-home-cuisine"><span>Name:</span> <%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %></p>
+      <p class="chef-home-cuisine"><span>Email:</span> <%= current_user.email %></p>
+      <p class="chef-home-cuisine"><span>Address:</span> <%= current_user.address %></p>
+      <p><%= link_to "Edit profile", kitchen_edit_foodie_path, class: 'btn btn-primary edit' %></p>
     </div>
-    <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.photo, width: 200, class: 'kitchen-foodie-user-image') %></div>
-    <p class="chef-home-cuisine"><span>Name:</span> <%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %></p>
-    <p class="chef-home-cuisine"><span>Email:</span> <%= current_user.email %></p>
-    <p class="chef-home-cuisine"><span>Address:</span> <%= current_user.address %></p>
-    <p><%= link_to "Edit profile", kitchen_edit_foodie_path, class: 'btn btn-primary edit' %></p>
   </div>
+
+  <div class="kitchen-foodie-bookings-container">
+    <div class="book-chef-title">
+   <h1>Booked Chefs</h1>
+   </div>
 
 
   <div class="kitchen-foodie-bookings">
-    <div class="bookings">
-      <h1>Booked Chefs</h1>
-    </div>
     <% @bookings.each do |booking| %>
       <div class="booked-card">
           <div class="booked-chef">
@@ -40,5 +44,6 @@
       </div>
     <% end %>
   </div>
+   </div>
 
 </div>

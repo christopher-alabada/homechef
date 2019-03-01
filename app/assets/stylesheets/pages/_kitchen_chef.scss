@@ -1,7 +1,23 @@
 .kitchen-foodie {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 55vh;
+  // margin-bottom: 55vh;
+}
+
+.kitchen-foodie-bookings-container {
+  // padding: 0 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+}
+
+.kitchen-foodie-profile-container {
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+  height: 80vh;
+  h1 {
+    margin-top: 25px;
+  }
 }
 
 .kitchen-foodie-profile {
@@ -11,10 +27,31 @@
   padding: 25px 15px 25px;
   border-radius: 4px;
   width: 500px;
+  padding-bottom: 30px;
 }
+
+.book-chef-title {
+  position: sticky !important; /* !important to override Gmaps inline CSS */
+  top: 0 !important;
+  // height: 100px;
+  background-color: white;
+  z-index: 2;
+  padding-top: 0.5px;
+  padding-bottom: 10px;
+}
+
+.booked-card {
+  margin: 20px 10px;
+}
+
+ // flex: 0 0 450px;
+ //  height: 100vh;
+ //  position: sticky !important; /* !important to override Gmaps inline CSS */
+ //  top: 0
 
 .kitchen-foodie-bookings {
   width: 500px;
+  z-index: -1;
 }
 
 .kitchen-foodie-user {
