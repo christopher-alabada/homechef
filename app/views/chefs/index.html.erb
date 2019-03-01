@@ -1,5 +1,12 @@
 <br>
 
+<div class="flex-grow-1 d-flex" style="display:flex; justify-content: center;">
+    <%= form_tag chefs_path, method: :get, class: "text-center" do %>
+      <%= text_field_tag :query, params[:query], class: "form-home mr-sm-2", placeholder: "Location or Cuisine" %>
+      <%= submit_tag "Search", class: "btn btn-danger", style: "margin: 43px;padding: 5px 25px 5px; margin-left: 10px;" %>
+    <% end %>
+</div>
+
 <div class="explore">
   <h1>Explore all chefs</h1>
 </div>
