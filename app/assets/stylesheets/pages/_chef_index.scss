@@ -133,6 +133,11 @@ p {
   height: 50px;
 }
 
+.navbar-title a:hover, a:visited, a:link, a:active {
+  // color: #FFFFFF;
+  text-decoration: none;
+}
+
 /* Logo */
 .navbar-brand {
   height: 50px;
