@@ -1,14 +1,15 @@
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1511344407683-b1172dce025f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80');">
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path(@chef.card_photo) %>');">
 </div>
 
+<% tags = @chef.tag_list.map { |tag| tag.capitalize } %>
 
 <div class="container">
   <div class="show-container">
     <div class="profile-container">
       <h1>About me</h1>
       <p><%= @chef.content %></p>
-      <h4>Locations Serving : <%#= @chef. %>  Shinjuku, Shibuya, Meguro</h4>
-      <h4>Cuisines: Japanese, Chinese, Italian, French</h4>
+      <h4>Location Serving: <%= @chef.location %>, within a <%= @chef.radius %> <%= @chef.units %> radius</h4>
+      <h4>Cuisines: <%= tags.join(", ") %></h4>
     </div>
 
     <div class="card-wrapper">
@@ -16,12 +17,11 @@
         <h3 class="chef-name"><%= @chef_full_name %> </h3>
         <div class="card-description">
           <div class="card-contents">
-        <p class="stars">★★★★★</p>
-        <p>Read reviews</p>
-        <p>¥1000~</p>
-
-        <label for="bookbtn" class="btn booklabel">Book</label>
+            <p><%= @chef.tagline %></p>
+            <p><strong>&#165;<%= @chef.price %> / hour</strong></p>
+            <label for="bookbtn" class="btn booklabel">Book</label>
           </div>
+
         <input type="checkbox" style="display: none;" id="bookbtn">
           <div class="popup" style="display: none;">
                 <div class="col-md-6">

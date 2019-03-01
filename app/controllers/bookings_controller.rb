@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     authorize @booking
 
     if @booking.save
-      redirect_to kitchen_bookings_path
+      redirect_to kitchen_chef_bookings_path(@chef)
     else
       redirect_to chef_path(@chef)
     end
