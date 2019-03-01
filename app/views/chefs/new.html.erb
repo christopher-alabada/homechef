@@ -12,6 +12,8 @@
   <%= f.input :card_photo %>
   <%= f.input :card_photo_cache, as: :hidden %>
 
+  <%= f.input :units,:collection => Chef::UNITS %>
+
   <%= f.button :submit, "Become" %>
 
 <% end %>
