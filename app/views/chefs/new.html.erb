@@ -36,15 +36,15 @@
     <%= f.input :price, placeholder:"How much do you charge per an hour?"%>
     </div>
 
-    <div class="sl-form-group">
-    <%= f.input :banner_photo %>
-    <%= f.input :banner_photo_cache, as: :hidden %>
-    </div>
+    <!-- <div class="sl-form-group">
+    <% f.input :banner_photo %>
+    <% f.input :banner_photo_cache, as: :hidden %>
+    </div> -->
 
     <div class="sl-form-group">
-    <%= f.input :card_photo %>
+    <%= f.input :card_photo, label: "Your meal photo here" %>
     <%= f.input :card_photo_cache, as: :hidden %>
-  </div>
+    </div>
 </div>
 
   <div class="form-actions sl-submit-btn">

@@ -14,7 +14,6 @@ class Chef < ApplicationRecord
   validates :radius, presence: true
   validates :units, presence: true
   validates :price, presence: true
-  validates :banner_photo, presence: true
   validates :card_photo, presence: true
   validates :units, inclusion: { in: UNITS }
 end
