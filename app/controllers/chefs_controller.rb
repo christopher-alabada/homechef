@@ -34,7 +34,6 @@ class ChefsController < ApplicationController
   def permit_create_chef
     params.require(:chef).permit(:tagline, :content,
       :banner_photo, :banner_photo_cache,
-      :card_photo, :card_photo_cache,
-      :user_photo, :user_photo_cache)
+      :card_photo, :card_photo_cache)
   end
 end
