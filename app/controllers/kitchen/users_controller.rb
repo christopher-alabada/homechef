@@ -3,7 +3,7 @@ class Kitchen::UsersController < ApplicationController
 
   def show
     authorize @foodie
-    @bookings = Booking.where(foodie_id: current_user[:id]).order(date: :desc)
+    @bookings = Booking.where(foodie_id: current_user[:id]).order(date: :asc)
   end
 
   def edit
