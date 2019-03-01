@@ -32,7 +32,7 @@ class ChefsController < ApplicationController
   private
 
   def permit_create_chef
-    params.require(:chef).permit(:tagline, :content, :units,
+    params.require(:chef).permit(:tagline, :content, :tagline, :content, :location, :radius, :units, :price,
       :banner_photo, :banner_photo_cache,
       :card_photo, :card_photo_cache)
   end

@@ -1,19 +1,59 @@
-<h1>Cook for other</h1>
+<div class="sl-page-wrapper">
+<div class="container">
+  <div class="sl-container">
+  <div class="sl-form-wrapper">
+
+<h2>Cook for other!</h2>
 
 <%= simple_form_for(@chef) do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :tagline %>
-  <%= f.input :content %>
+  <div class="form-inputs">
+    <div class="sl-form-inputs">
 
-  <%= f.input :banner_photo %>
-  <%= f.input :banner_photo_cache, as: :hidden %>
+    <div class="sl-form-group">
+    <%= f.input :tagline, placeholder:"Attention getter inline" %>
+    </div>
+    <div class="sl-form-group">
+    <%= f.input :content, placeholder:"Describe yourself and your cuisines!" %>
+    </div>
 
-  <%= f.input :card_photo %>
-  <%= f.input :card_photo_cache, as: :hidden %>
+    <div class="sl-form-group">
+    <%= f.input :location, placeholder:"Where is your base kitchen located?"%>
+    </div>
 
-  <%= f.input :units,:collection => Chef::UNITS %>
 
-  <%= f.button :submit, "Become" %>
+    <div class="sl-full-name">
+      <div class="sl-form-group" style="margin-right: 10px; width: 300px">
+      <%= f.input :radius, placeholder:"How far you would go cooking?"%>
+    </div>
+      <div class="sl-form-group">
+      <%= f.input :units,:collection => Chef::UNITS, selected: "km"%>
+    </div>
+    </div>
+
+    <div class="sl-form-group">
+    <%= f.input :price, placeholder:"How much do you charge per an hour?"%>
+    </div>
+
+    <div class="sl-form-group">
+    <%= f.input :banner_photo %>
+    <%= f.input :banner_photo_cache, as: :hidden %>
+    </div>
+
+    <div class="sl-form-group">
+    <%= f.input :card_photo %>
+    <%= f.input :card_photo_cache, as: :hidden %>
+  </div>
+</div>
+
+  <div class="form-actions sl-submit-btn">
+  <p><%= f.button :submit, "Become" %></p>
+  </div>
 
 <% end %>
+
+</div>
+  </div>
+</div>
+</div>
