@@ -14,7 +14,11 @@
     <% if user_signed_in? %>
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= cl_image_tag(current_user.photo, width: 50, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data: {toggle: "dropdown"}) %>
+          <% if current_user.photo.blank? %>
+            <%= image_tag "https://via.placeholder.com/50/", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data: {toggle: "dropdown"} %>
+          <% else %>
+            <%= cl_image_tag(current_user.photo, width: 50, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data: {toggle: "dropdown"}) %>
+          <% end %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
 
             <% if current_user.chef_id.nil? %>
