@@ -91,6 +91,28 @@ body {
   font-size: 30px;
   padding: 10px 85px 0px;
   font-weight: lighter;
+  color: black;
+}
+
+.bookings h1 {
+  font-family: "Open Sans";
+  font-size: 30px;
+  font-weight: lighter;
+  color: black;
+  display: flex;
+  bottom: 51px;
+  position: relative;
+}
+
+.my-profile h1 {
+  font-family: "Open Sans";
+  position: relative;
+  bottom: 95px;
+  right: 15px;
+  font-size: 30px;
+  font-weight: lighter;
+  color: black;
+  display: flex;
 }
 
 .card-home {
