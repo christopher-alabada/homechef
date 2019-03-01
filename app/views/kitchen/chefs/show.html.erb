@@ -6,9 +6,10 @@
 
   <div class="kitchen-foodie-profile">
     <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.photo, width: 200, class: 'kitchen-foodie-user-image') %></div>
-    <div><%= cl_image_tag(current_user.chef.banner_photo, width: 200) %></div>
-    <div><%= cl_image_tag(current_user.chef.card_photo, width: 200) %></div>
-    <div><%= cl_image_tag(current_user.chef.user_photo, width: 200) %></div>
+    <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.chef.banner_photo, width: 200) %></div>
+    <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.chef.card_photo, width: 200) %></div>
+    <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.chef.user_photo, width: 200) %></div>
+    <p style="text-transform: capitalize;"><span>Name:</span> <%= current_user.first_name %> <%= current_user.last_name %></p>
     <p><span>Tagline:</span> <%= current_user.chef.tagline %></p>
     <p><span>Description:</span> <%= current_user.chef.content %></p>
     <p><span>Location:</span> <%= current_user.chef.location %></p>
@@ -32,8 +33,8 @@
         <div class="booked-card-category">Status - <%= booking.state %></div>
         <div class="booked-card-date">Date - <%= booking.date %></div>
         <div class="booked-card-description">
-          <p><%= booking.chef.user.first_name %></p>
-          <p><%= booking.chef.user.last_name %></p>
+          <p><%= booking.foodie.first_name %></p>
+          <p><%= booking.foodie.last_name %></p>
         </div>
       </div>
     <% end %>
