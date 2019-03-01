@@ -16,19 +16,19 @@
   </div>
 
   <div class="kitchen-foodie-bookings">
-    <!-- <# % @bookings.each do |booking| %>
+    <% @bookings.each do |booking| %>
       <div class="booked-card">
         <div class="booked-chef">
-          <%# = cl_image_tag(booking.chef.user.photo, class: 'my_chef_image') %>
+          <%= cl_image_tag(booking.foodie.photo, class: 'my_chef_image') %>
         </div>
-        <div class="booked-card-category">Status - <%#= booking.state %></div>
-        <div class="booked-card-date">Date - <%#= booking.date %></div>
+        <div class="booked-card-category">Status - <%= booking.state %></div>
+        <div class="booked-card-date">Date - <%= booking.date %></div>
         <div class="booked-card-description">
-          <p><%# = booking.chef.user.first_name %></p>
-          <p><%# = booking.chef.user.last_name %></p>
+          <p><%= booking.chef.user.first_name %></p>
+          <p><%= booking.chef.user.last_name %></p>
         </div>
       </div>
-    <%# end %> -->
+    <% end %>
   </div>
 
 </div>
