@@ -3,6 +3,7 @@ class Kitchen::ChefsController < ApplicationController
 
   def show
     authorize @chef
+    @bookings = Booking.where(chef: @chef)
   end
 
   def edit
@@ -23,7 +24,7 @@ class Kitchen::ChefsController < ApplicationController
   private
 
   def set_chef
-    @chef = Chef.find(current_user[:id])
+    @chef = Chef.find_by(user: current_user)
   end
 
   def kitchen_chef_params
