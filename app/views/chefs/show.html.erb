@@ -19,7 +19,14 @@
           <div class="card-contents">
             <p><%= @chef.tagline %></p>
             <p><strong>&#165;<%= @chef.price %> / hour</strong></p>
-            <label for="bookbtn" class="btn booklabel">Book</label>
+
+            <% if user_signed_in? %>
+              <label for="bookbtn" class="btn booklabel">Book</label>
+            <% else %>
+              <%= link_to "Book", new_user_session_path, class: "btn booklabel" %>
+              <!-- <label for="bookbtn" class="btn booklabel">Book</label> -->
+            <% end %>
+
           </div>
 
         <input type="checkbox" style="display: none;" id="bookbtn">
@@ -35,22 +42,18 @@
           </div>
         <script>
           $(document).ready(function() {
-                      $("#bookbtn").change(function(){
-                        if(this.checked){
-                          $(".popup")[0].style.display = "block";
-                          $(".card-contents")[0].style.display = "none";
-                        } else {
-                          $(".popup")[0].style.display = "none";
-                        }
-                      })
-                    });
+            $("#bookbtn").change(function(){
+              if(this.checked){
+                $(".popup")[0].style.display = "block";
+                $(".card-contents")[0].style.display = "none";
+              } else {
+                $(".popup")[0].style.display = "none";
+              }
+            })
+          });
         </script>
         </div>
-        <% if @chef.user_photo.url %>
-          <%= cl_image_tag(@chef.user_photo, class: 'card-user') %>
-        <% else %>
-          <%= cl_image_tag(@chef.user.photo, class: 'card-user') %>
-        <% end %>
+        <%= cl_image_tag(@chef.user.photo, class: 'card-user') %>
       </div>
     </div>
   </div>
