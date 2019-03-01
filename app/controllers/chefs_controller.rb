@@ -3,7 +3,15 @@ class ChefsController < ApplicationController
   skip_after_action :verify_authorized, only: [:show, :create]
 
   def index
-    @chefs = policy_scope(Chef)
+    if params[:query].present?
+      query = params[:query].downcase
+      locations = policy_scope(Chef).where('lower(location) = ?', query.downcase)
+      foods = Chef.tagged_with(query)
+      @chefs = locations + foods
+      # raise
+    else
+      @chefs = policy_scope(Chef)
+    end
   end
 
   def show

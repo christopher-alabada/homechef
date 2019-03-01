@@ -4,9 +4,9 @@
         <p style="text-align: center;color: white;text-shadow: 0.5px 0.5px 0.5px #000000;">Request a chef and experience the best a fresh homemade dish has to offer</p>
         <div class="flex-grow-1 d-flex" style="display:flex; justify-content: center;">
             <%= form_tag chefs_path, method: :get, class: "text-center" do %>
-              <%= text_field_tag :query, params[:query], class: "form-home mr-sm-2", placeholder: "Location" %>
+              <%= text_field_tag :query, params[:query], class: "form-home mr-sm-2", placeholder: "Location or Cuisine" %>
+              <%= submit_tag "Search", class: "btn btn-danger", style: "margin: 43px;padding: 5px 25px 5px; margin-left: 10px;" %>
             <% end %>
-            <a type="button" class="btn btn-danger" style="margin: 43px;padding: 5px 25px 5px; margin-left: 10px;" href="https://home-chef.herokuapp.com/chefs">Search</a>
 
         </div>
   </div>
