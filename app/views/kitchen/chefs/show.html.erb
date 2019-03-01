@@ -1,19 +1,28 @@
-<div class="head-comment">
-  <h1 style="color: #233142">Bookings</h1>
-</div>
-
 <div class="container kitchen-foodie">
+
+
+<div class="kitchen-foodie-profile-container" style="margin-bottom: 100px;">
+  <h1 style="color: #233142">Bookings</h1>
+
   <div class="kitchen-foodie-profile">
     <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.photo, width: 200, class: 'kitchen-foodie-user-image') %></div>
-    <div><%= cl_image_tag(current_user.chef.banner_photo, width: 200) %></div>
-    <div><%= cl_image_tag(current_user.chef.card_photo, width: 200) %></div>
-    <div><%= cl_image_tag(current_user.chef.user_photo, width: 200) %></div>
+    <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.chef.banner_photo, width: 200) %></div>
+    <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.chef.card_photo, width: 200) %></div>
+    <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.chef.user_photo, width: 200) %></div>
+    <p style="text-transform: capitalize;"><span>Name:</span> <%= current_user.first_name %> <%= current_user.last_name %></p>
     <p><span>Tagline:</span> <%= current_user.chef.tagline %></p>
     <p><span>Description:</span> <%= current_user.chef.content %></p>
     <p><span>Location:</span> <%= current_user.chef.location %></p>
     <p><span>Radius:</span> <%= current_user.chef.radius %> <%= current_user.chef.units %></p>
     <p><%= link_to "Edit profile", kitchen_edit_chef_path, class: 'btn btn-success' %></p>
   </div>
+
+</div>
+
+<div class="kitchen-foodie-bookings-container">
+    <div class="book-chef-title">
+   <h1>Your foodies</h1>
+   </div>
 
   <div class="kitchen-foodie-bookings">
     <% @bookings.each do |booking| %>
@@ -24,11 +33,12 @@
         <div class="booked-card-category">Status - <%= booking.state %></div>
         <div class="booked-card-date">Date - <%= booking.date %></div>
         <div class="booked-card-description">
-          <p><%= booking.chef.user.first_name %></p>
-          <p><%= booking.chef.user.last_name %></p>
+          <p><%= booking.foodie.first_name %></p>
+          <p><%= booking.foodie.last_name %></p>
         </div>
       </div>
     <% end %>
   </div>
+</div>
 
 </div>
