@@ -55,9 +55,11 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  font-size: 15px;
+  font-size: 25px;
+  font-weight: lighter;
   text-transform: uppercase;
   color: black;
+  margin: 0;
 }
 .card-description {
   position: absolute;
@@ -68,8 +70,8 @@
 .card-user {
   position: absolute;
   right: 30px;
-  top: 30px;
-  width: 100px;
+  top: 45px;
+  width: 150px;
   border-radius: 50%;
 }
 .stars {
