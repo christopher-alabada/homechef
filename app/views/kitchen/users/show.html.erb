@@ -1,10 +1,20 @@
+<!-- <div class="my-profile">
+  <h1>My Profile</h1>
+</div> -->
+
+<!-- <div class="bookings">
+  <h1>Booked Chefs</h1>
+</div> -->
+
 <br>
-<div class="explore">
-  <h1>Bookings</h1>
-</div>
+<br>
+<br>
 
 <div class="container kitchen-foodie">
   <div class="kitchen-foodie-profile">
+    <div class="my-profile">
+    <h1>My Profile</h1>
+    </div>
     <div class="kitchen-foodie-user"><%= cl_image_tag(current_user.photo, width: 200, class: 'kitchen-foodie-user-image') %></div>
     <p class="chef-home-cuisine"><span>Name:</span> <%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %></p>
     <p class="chef-home-cuisine"><span>Email:</span> <%= current_user.email %></p>
@@ -16,14 +26,16 @@
   <div class="kitchen-foodie-bookings">
     <% @bookings.each do |booking| %>
       <div class="booked-card">
-        <div class="booked-chef">
-          <%= cl_image_tag(booking.chef.user.photo, class: 'my_chef_image') %>
-        </div>
-        <div class="booked-card-category">Status - <%= booking.state %></div>
-        <div class="booked-card-date">Date - <%= booking.date %></div>
-        <div class="booked-card-description">
-          <p><%= booking.chef.user.first_name %></p>
-          <p><%= booking.chef.user.last_name %></p>
+          <div class="booked-chef">
+            <div class="bookings">
+            <h1>Booked Chefs</h1>
+            </div>
+            <%= cl_image_tag(booking.chef.user.photo, class: 'my_chef_image') %>
+          </div>
+          <div class="booked-card-category">Schedule<%= booking.state %></div>
+          <div class="booked-card-date"><%= booking.date %></div>
+          <div class="booked-card-description">
+          <p><%= booking.chef.user.first_name %> <%= booking.chef.user.last_name %></p>
         </div>
       </div>
     <% end %>
