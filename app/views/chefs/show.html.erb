@@ -19,6 +19,7 @@
         <div class="card-description">
           <div class="card-contents">
             <p><%= @chef.tagline %></p>
+            <p><%= @chef.tag_list %></p>
             <p><strong>&#165;<%= @chef.price %> / hour</strong></p>
 
             <% if user_signed_in? %>
