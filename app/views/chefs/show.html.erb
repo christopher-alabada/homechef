@@ -1,25 +1,31 @@
 <body>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path(@chef.card_photo) %>');">
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path(@chef.card_photo) %>');background-position: center;">
 </div>
+
+<br>
 
 <% tags = @chef.tag_list.map { |tag| tag.capitalize } %>
 
 <div class="container">
   <div class="show-container">
     <div class="profile-container">
-      <h1>About me</h1>
-      <p><%= @chef.content %></p>
-      <h4>Location Serving: <%= @chef.location %>, within a <%= @chef.radius %> <%= @chef.units %> radius</h4>
-      <h4>Cuisines: <%= tags.join(", ") %></h4>
+      <div class="explore">
+      <h1 style="position: relative;bottom: 50px;right: 85px;">About me</h1>
+      </div>
+      <p style="position: relative;bottom: 40px;"><%= @chef.content %></p>
+      <h4 style="position: relative;bottom: 25px;">Location Serving: <%= @chef.location %>, within a <%= @chef.radius %> <%= @chef.units %> radius</h4>
+      <h4 style="
+    position: relative;
+    bottom: 10px;">Cuisines: <%= tags.join(", ") %></h4>
     </div>
 
     <div class="card-wrapper">
       <div class="banner-content">
-        <h3 class="chef-name"><%= @chef.user.first_name.capitalize %> <%= @chef.user.last_name.capitalize %></h3>
+        <p class="chef-show-name"><%= @chef.user.first_name.capitalize %> <%= @chef.user.last_name.capitalize %></p>
         <div class="card-description">
           <div class="card-contents">
             <p><%= @chef.tagline %></p>
-            <p><%= @chef.tag_list %></p>
+            <p style="text-transform: capitalize;"><%= @chef.tag_list %></p>
             <p><strong>&#165;<%= @chef.price %> / hour</strong></p>
 
             <% if user_signed_in? %>
